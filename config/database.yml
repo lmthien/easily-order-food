@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: mysql2
   pool: 5
   timeout: 5000
   username: root
@@ -14,7 +14,7 @@ default: &default
 
 development:
   <<: *default
-  database: easily-order-food
+  database: orderfood
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

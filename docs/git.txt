@@ -1,0 +1,26 @@
+1. git add -A				=> dua file moi len
+2. git commit -m "GLOB-254,252 : Working on company period" app/config/ossm.php => dua nhung file sua len
+3.git commit -am "GLOB-254: merge with development": commit tat ca file moi lay ve tu branch development
+3. git push				==> day code len server
+4. git checkout development		==> update source code tu branch development de merge
+5. git checkout GLOB-254		==> chuyen tro lai brnahc GLOB-254
+6. git merge development		==> merge code tu development vao GLOB-254
+7. git branch -d development		==> sau khi merge thi xoa branch development
+
+---------------------------------
+8. git clone -b my-branch git@github.com:user/myproject.git GLOB-254: lenh clone tu branch
+10. git branch : xem nhanh minh dang lam
+11. tiep do checkout GLOB-254
+12.kiem tra lai nhanh dang o dau
+12: tiep do git merge development
+13:git commit -a ;la merge cai code bi conflit
+git push : day co len
+----------------------------------
+checkout source moi ve cho task moi
+
+1.git clone -b development git@github.com:user/myproject.git GLOB-280: lay code nhanh development ve sau do dat ten GLOB-280
+2. git branch GLOB-280 : tao nhanh moi tren bitkuket
+3. git checkout GLOB-280 : check out ve
+3. git branch -d development : xoa cai nhanh development di
+4. git push origin GLOB-280: day code ban dau len nhanh moi la GLOB-280
+

@@ -1,0 +1,19 @@
+Learning tasks
+ Using Slack to communicate
+ Unit test - Khoa
+ Deployment (using tool) - Hai
+ Build production server - Giang
+ Running different mode (development, testing, production) - Phu 
+ Relationship - Thien Embed Angular.js, bootstrap.js CI (code 
+ inspection, UT coverage) - Khoa Coding standard - Giang Best practices 
+ All Register a forum - All Start Agile Scrum - Khoa is Scrum Master 
+ Jira training - Giang Github training - Giang Auto-generate model from 
+ existing DB - Phu
+
+ Demo
+ DB design - Thien
+ Home (daily menu, navigation, login) - Giang Place order (select 
+ products, calculate bill, send email to confirm) - Khoa Sign Up - Phu
+ Admin: list order (paging), list customer (paging) - Hai, edit daily 
+ menu, view customer details, view order details - Thien Localization - 
+ Hai

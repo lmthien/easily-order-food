@@ -223,3 +223,29 @@ CREATE TABLE `mtx_order_detail` (
   `price` float NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `mtx_dialy_menu`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mtx_dialy_menu` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,  
+  `note` text,  
+  `status` int(11),
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_id` int(11) DEFAULT NULL,
+  `updated_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `mtx_dialy_menu_detail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mtx_dialy_menu_detail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dialy_menu_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,  
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
