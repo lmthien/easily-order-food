@@ -45,7 +45,6 @@ CREATE TABLE IF NOT EXISTS `mtx_media` (
   `title` int(11) DEFAULT NULL,
   `created_id` int(11) DEFAULT NULL,
   `updated_id` int(11) DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `width` int(11) DEFAULT NULL,
   `height` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
@@ -120,7 +119,6 @@ CREATE TABLE `mtx_order_detail` (
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
-  `price` float NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY (`order_id`) REFERENCES `mtx_orders` (`id`),
   FOREIGN KEY (`product_id`) REFERENCES `mtx_product` (`id`)
@@ -136,8 +134,8 @@ CREATE TABLE `mtx_weekly_menu` (
   `day_title` VARCHAR (255) DEFAULT NULL,
   `note` text,  
   `status` int(11),
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
   `created_id` int(11) DEFAULT NULL,
   `updated_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
