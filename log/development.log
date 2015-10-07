@@ -1,409 +1,1594 @@
 
 
-Started GET "/" for 127.0.0.1 at 2015-09-30 21:26:45 -0700
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:16:51 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+Unpermitted parameters: name, intro, description
+Unpermitted parameters: name, intro, description
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+{:mtx_product=>{:price=>{}, :status=>{}, :mtx_product_language_attributes=>[{:name=>{"name"=>"a"}}, {:intro=>{"intro"=>"asd"}}, {:description=>{"description"=>"ds adas das"}}]}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
 
-Gem::LoadError (Specified 'sqlite3' for database adapter, but the gem is not loaded. Add `gem 'sqlite3'` to your Gemfile (and ensure its version is at the minimum required by ActiveRecord).):
-  activerecord (4.2.4) lib/active_record/connection_adapters/connection_specification.rb:177:in `rescue in spec'
-  activerecord (4.2.4) lib/active_record/connection_adapters/connection_specification.rb:174:in `spec'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:50:in `establish_connection'
-  activerecord (4.2.4) lib/active_record/railtie.rb:120:in `block (2 levels) in <class:Railtie>'
-  activesupport (4.2.4) lib/active_support/lazy_load_hooks.rb:38:in `instance_eval'
-  activesupport (4.2.4) lib/active_support/lazy_load_hooks.rb:38:in `execute_hook'
-  activesupport (4.2.4) lib/active_support/lazy_load_hooks.rb:45:in `block in run_load_hooks'
-  activesupport (4.2.4) lib/active_support/lazy_load_hooks.rb:44:in `each'
-  activesupport (4.2.4) lib/active_support/lazy_load_hooks.rb:44:in `run_load_hooks'
-  activerecord (4.2.4) lib/active_record/base.rb:315:in `<module:ActiveRecord>'
-  activerecord (4.2.4) lib/active_record/base.rb:26:in `<top (required)>'
-  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+SystemExit (exit):
+  app/controllers/mtx_products_controller.rb:40:in `exit'
+  app/controllers/mtx_products_controller.rb:40:in `create'
 
 
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (50.8ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (27.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (57.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2015-09-30 21:27:31 -0700
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:18:53 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+111111111111
+{"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language", "controller"=>"mtx_products", "action"=>"create"}
+Unpermitted parameters: name, intro, description
+Unpermitted parameters: name, intro, description
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+222222222222
+{:mtx_product=>{:price=>{}, :status=>{}, :mtx_product_language_attributes=>[{:name=>{"name"=>"a"}}, {:intro=>{"intro"=>"asd"}}, {:description=>{"description"=>"ds adas das"}}]}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
 
-ActiveRecord::NoDatabaseError (Unknown database 'easily-order-food'):
-  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:23:in `rescue in mysql2_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:10:in `mysql2_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+SystemExit (exit):
+  app/controllers/mtx_products_controller.rb:44:in `exit'
+  app/controllers/mtx_products_controller.rb:44:in `create'
 
 
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (42.6ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (29.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (59.0ms)
 
 
-Started GET "/" for 127.0.0.1 at 2015-09-30 21:30:04 -0700
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:19:34 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+111111111111
+{"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language", "controller"=>"mtx_products", "action"=>"create"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+222222222222
+{:mtx_product=>{:price=>{"price"=>"32"}, :status=>{"status"=>"1"}, :mtx_product_language_attributes=>[{:name=>{"name"=>"a"}}, {:intro=>{"intro"=>"asd"}}, {:description=>{"description"=>"ds adas das"}}]}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/mtx_products_controller.rb:44:in `exit'
+  app/controllers/mtx_products_controller.rb:44:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (115.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:19:53 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+111111111111
+{"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language", "controller"=>"mtx_products", "action"=>"create"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 93.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'mtx_product' for MtxProduct.):
+  app/controllers/mtx_products_controller.rb:43:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (136.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:20:31 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+111111111111
+{"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language", "controller"=>"mtx_products", "action"=>"create"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 39.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'MtxProduct' for MtxProduct.):
+  app/controllers/mtx_products_controller.rb:43:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:20:48 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+111111111111
+{"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language", "controller"=>"mtx_products", "action"=>"create"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 13.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'mtx_product_language_attributes' for MtxProduct.):
+  app/controllers/mtx_products_controller.rb:43:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (30.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (65.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:25:57 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 24.0ms)
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/controllers/mtx_products_controller.rb:42:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (163.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:27:17 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"32", "status"=>"1"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/mtx_products_controller.rb:44:in `exit'
+  app/controllers/mtx_products_controller.rb:44:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (79.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (169.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:27:53 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"32", "status"=>"1"}
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 44.0ms)
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/controllers/mtx_products_controller.rb:47:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (164.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:28:26 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"32", "status"=>"1"}
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 25.0ms)
+
+NoMethodError (undefined method `save' for nil:NilClass):
+  app/controllers/mtx_products_controller.rb:50:in `block in create'
+  app/controllers/mtx_products_controller.rb:49:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (164.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:29:02 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6W3O/wS1oHVR6418oBFelHYeJW8A/llc2d0LIfV6biXna3cUqLXv+PbXpQbmk4Qgqmj+GxkUwlCNUmrhiEUxbg==", "mtx_product_language"=>{"name"=>"a", "intro"=>"asd", "description"=>"ds adas das"}, "mtx_product"=>{"price"=>"32", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"32", "status"=>"1"}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (25.0ms)[0m  INSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (32, 1, '2015-10-07 16:29:02', '2015-10-07 16:29:02')
+  [1m[36m (71.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/mtx_products/2
+Completed 302 Found in 172ms (ActiveRecord: 119.0ms)
+
+
+Started GET "/mtx_products/2" for 127.0.0.1 at 2015-10-07 23:29:02 +0700
+Processing by MtxProductsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMtxProduct Load (0.0ms)[0m  SELECT  `mtx_product`.* FROM `mtx_product` WHERE `mtx_product`.`id` = 2 LIMIT 1
+  Rendered mtx_products/show.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<MtxProduct:0x0000000be78bb8>):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @mtx_product.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/mtx_products/show.html.erb:5:in `_app_views_mtx_products_show_html_erb___168921233_98585180'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (170.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-07 23:29:11 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (10.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 289ms (Views: 209.0ms | ActiveRecord: 61.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:29:39 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jeXExmDPBW/z1EI5iCLC5ujLL7haD06hcJCxFG2XqQCD430tzM9K4lToakPOoBhSNL30zEPl1a0kH9DUEKj2Sw==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"1", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"1", "status"=>"1"}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (25.0ms)[0m  INSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (1, 1, '2015-10-07 16:29:39', '2015-10-07 16:29:39')
+  [1m[36m (51.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/mtx_products/3
+Completed 302 Found in 151ms (ActiveRecord: 101.0ms)
+
+
+Started GET "/mtx_products/3" for 127.0.0.1 at 2015-10-07 23:29:39 +0700
+Processing by MtxProductsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMtxProduct Load (0.0ms)[0m  SELECT  `mtx_product`.* FROM `mtx_product` WHERE `mtx_product`.`id` = 3 LIMIT 1
+  Rendered mtx_products/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<MtxProduct:0x0000000b7c5348>):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @mtx_product.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/mtx_products/show.html.erb:5:in `_app_views_mtx_products_show_html_erb___168921233_98585180'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (165.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-07 23:30:04 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (10.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 269ms (Views: 179.0ms | ActiveRecord: 41.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:30:11 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XD4uBJdvVVvPetBLTfdAovCh6ov5UaD1HisafG/gTcBSOJfvO28a1mhG+DELdZoWLNcx/+C7O/lKpHu8Et8Siw==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"1", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"1", "status"=>"1"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/controllers/mtx_products_controller.rb:47:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (164.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:34:59 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XD4uBJdvVVvPetBLTfdAovCh6ov5UaD1HisafG/gTcBSOJfvO28a1mhG+DELdZoWLNcx/+C7O/lKpHu8Et8Siw==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"1", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"1", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 266ms (ActiveRecord: 78.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'mtx_product_id' for MtxProductLanguage.):
+  app/controllers/mtx_products_controller.rb:53:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (188.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-07 23:36:15 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (12.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 295ms (Views: 200.0ms | ActiveRecord: 41.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:36:23 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `mtx_product_languages_build=' for #<MtxProduct:0x0000000c43a6c8>):
+  app/controllers/mtx_products_controller.rb:52:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (182.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:36:59 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 24.0ms)
+
+NoMethodError (undefined method `MtxProductLanguage' for #<MtxProductsController:0x000000062be840>):
+  app/controllers/mtx_products_controller.rb:52:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (169.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:37:13 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 103.0ms)
+
+NoMethodError (undefined method `each' for #<MtxProductLanguage:0x0000000d8bfa58>):
+  app/controllers/mtx_products_controller.rb:52:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (79.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (172.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:38:16 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 102.0ms)
+
+NoMethodError (undefined method `each' for #<MtxProductLanguage:0x0000000c100d68>):
+  app/controllers/mtx_products_controller.rb:52:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:39:08 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Unpermitted parameters: price, status
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 51.0ms)
+
+NoMethodError (undefined method `each' for #<MtxProductLanguage:0x0000000c43bd98>):
+  app/controllers/mtx_products_controller.rb:52:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (168.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:40:57 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Unpermitted parameters: price, status
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (60.0ms)[0m  INSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (12, 1, '2015-10-07 16:40:57', '2015-10-07 16:40:57')
+  [1m[36m (61.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 246ms (ActiveRecord: 163.0ms)
+
+ActiveModel::MissingAttributeError (can't write unknown attribute `mtx_product_id`):
+  app/controllers/mtx_products_controller.rb:55:in `block in create'
+  app/controllers/mtx_products_controller.rb:54:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (169.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:43:14 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (17.0ms)[0m  [1mINSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (12, 1, '2015-10-07 16:43:14', '2015-10-07 16:43:14')[0m
+  [1m[35m (139.0ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 280ms (ActiveRecord: 205.0ms)
+
+ActiveModel::MissingAttributeError (can't write unknown attribute `mtx_product_id`):
+  app/controllers/mtx_products_controller.rb:55:in `block in create'
+  app/controllers/mtx_products_controller.rb:54:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (107.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (185.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (278.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:45:00 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (12, 1, '2015-10-07 16:45:00', '2015-10-07 16:45:00')
+  [1m[36m (148.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 208.0ms)
+
+ActiveModel::MissingAttributeError (can't write unknown attribute `mtx_product_id`):
+  app/controllers/mtx_products_controller.rb:55:in `block in create'
+  app/controllers/mtx_products_controller.rb:54:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (84.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (153.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:45:16 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (12, 1, '2015-10-07 16:45:16', '2015-10-07 16:45:16')[0m
+  [1m[35m (160.0ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 235.0ms)
+
+ActiveModel::MissingAttributeError (can't write unknown attribute `mtx_product_id`):
+  app/controllers/mtx_products_controller.rb:55:in `block in create'
+  app/controllers/mtx_products_controller.rb:54:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (110.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (278.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:48:46 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (22.0ms)[0m  INSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (12, 1, '2015-10-07 16:48:46', '2015-10-07 16:48:46')
+  [1m[36m (64.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 130.0ms)
+
+ActiveModel::MissingAttributeError (can't write unknown attribute `mtx_product_id`):
+  app/controllers/mtx_products_controller.rb:55:in `block in create'
+  app/controllers/mtx_products_controller.rb:54:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (176.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:49:44 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TO8JtaRzP6sOJIscoTgECngvrHj/yQ5P/4uUTn82EbtC6bBeCHNwJqkYo2bnut6+pFl3DOYjlUOrBPWOAglO8A==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"12", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+1111111111111
+{"price"=>"12", "status"=>"1"}
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (12, 1, '2015-10-07 16:49:44', '2015-10-07 16:49:44')[0m
+  [1m[35mSQL (191.0ms)[0m  INSERT INTO `mtx_product_language` (`name`, `intro`, `description`, `product_id`) VALUES ('a', 'b', 'c', 9)
+  [1m[36m (44.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/mtx_products/9
+Completed 302 Found in 347ms (ActiveRecord: 281.0ms)
+
+
+Started GET "/mtx_products/9" for 127.0.0.1 at 2015-10-07 23:49:45 +0700
+Processing by MtxProductsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mMtxProduct Load (1.0ms)[0m  SELECT  `mtx_product`.* FROM `mtx_product` WHERE `mtx_product`.`id` = 9 LIMIT 1
+  Rendered mtx_products/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<MtxProduct:0x0000000f063f10>):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @mtx_product.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/mtx_products/show.html.erb:5:in `_app_views_mtx_products_show_html_erb___168921233_98585180'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (178.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-07 23:50:55 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (11.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 286ms (Views: 193.0ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-07 23:50:55 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (9.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 214ms (Views: 212.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:51:03 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"784ITNFDyyAv8xbLMrb/5jrph7cuG/ufheWVfxwUTBPhyLGnfUOErYjPPrF0NCVS5p9cwzfxYJPRavS/YSsTWA==", "mtx_product_language"=>{"name"=>"aaaaaaaaaa", "intro"=>"bbbbbbbbbbbbbb", "description"=>"ccccccccccccc"}, "mtx_product"=>{"price"=>"22222222", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (22222222, 0, '2015-10-07 16:51:03', '2015-10-07 16:51:03')
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO `mtx_product_language` (`name`, `intro`, `description`, `product_id`) VALUES ('aaaaaaaaaa', 'bbbbbbbbbbbbbb', 'ccccccccccccc', 10)[0m
+  [1m[35m (127.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/mtx_products/10
+Completed 302 Found in 161ms (ActiveRecord: 130.0ms)
+
+
+Started GET "/mtx_products/10" for 127.0.0.1 at 2015-10-07 23:51:03 +0700
+Processing by MtxProductsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMtxProduct Load (2.0ms)[0m  [1mSELECT  `mtx_product`.* FROM `mtx_product` WHERE `mtx_product`.`id` = 10 LIMIT 1[0m
+  Rendered mtx_products/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<MtxProduct:0x00000010d68cc8>):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @mtx_product.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/mtx_products/show.html.erb:5:in `_app_views_mtx_products_show_html_erb___168921233_98585180'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (152.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (54.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (127.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-07 23:52:05 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (12.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 284ms (Views: 185.0ms | ActiveRecord: 51.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:52:16 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2aEdacNAnuHDne7Rm2ZImJ2j0OJwE1bJ70px6t8n8w9YD2eCw1N9iAyX8EA70OWvgBUN5Aq1ldzMkgH1kPAhw==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b1", "description"=>"c1"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'mtx_product_language_attributes' for MtxProduct.):
+  app/controllers/mtx_products_controller.rb:44:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (193.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-07 23:53:31 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (10.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 304ms (Views: 174.0ms | ActiveRecord: 45.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:53:40 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` ({"status"=>"0"}) to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from create at d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:44)
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (14.0ms)[0m  [1mINSERT INTO `mtx_product` (`status`, `created_at`, `updated_at`) VALUES (0, '2015-10-07 16:53:40', '2015-10-07 16:53:40')[0m
+  [1m[35mSQL (197.0ms)[0m  INSERT INTO `mtx_product_language` (`name`, `product_id`) VALUES ('{\"name\"=>\"a1\"}', 11)
+  [1m[36mSQL (62.0ms)[0m  [1mINSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('{\"intro\"=>\"b2\"}', 11)[0m
+Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('{\"intro\"=>\"b2\"}', 11)
+  [1m[35m (40.0ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 360ms (ActiveRecord: 314.0ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('{\"intro\"=>\"b2\"}', 11)):
+  app/controllers/mtx_products_controller.rb:47:in `block in create'
+  app/controllers/mtx_products_controller.rb:46:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:55:23 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+111111111111
+{:price=>{"price"=>"3"}, :status=>{"status"=>"0"}, :mtx_product_languages_attributes=>[{:name=>{"name"=>"a1"}}, {:intro=>{"intro"=>"b2"}}, {:description=>{"description"=>"c2"}}]}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/mtx_products_controller.rb:43:in `exit'
+  app/controllers/mtx_products_controller.rb:43:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (175.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:56:37 +0700
+
+SyntaxError (d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:32: syntax error, unexpected ',', expecting =>
+d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting keyword_end):
+  app/controllers/mtx_products_controller.rb:32: syntax error, unexpected ',', expecting =>
+  app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (174.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:57:54 +0700
+
+SyntaxError (d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:32: syntax error, unexpected ',', expecting =>
+d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting keyword_end):
+  app/controllers/mtx_products_controller.rb:32: syntax error, unexpected ',', expecting =>
+  app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (165.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:58:48 +0700
+
+SyntaxError (d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:32: syntax error, unexpected '\n', expecting =>
+d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting keyword_end):
+  app/controllers/mtx_products_controller.rb:32: syntax error, unexpected '\n', expecting =>
+  app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (187.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (275.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:59:05 +0700
+
+SyntaxError (d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:32: syntax error, unexpected '}', expecting =>
+      {params.require(:mtx_product).permit(:price, :status)},
+                                                            ^
+d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting keyword_end):
+  app/controllers/mtx_products_controller.rb:32: syntax error, unexpected '}', expecting =>
+  app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting keyword_end
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (84.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (172.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-07 23:59:50 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+111111111111
+{:price=>{"price"=>"3"}, :status=>{"status"=>"0"}, :mtx_product_languages_attributes=>[{:name=>{"name"=>"a1"}}, {:intro=>{"intro"=>"b2"}}, {:description=>{"description"=>"c2"}}]}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/mtx_products_controller.rb:43:in `exit'
+  app/controllers/mtx_products_controller.rb:43:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:01:12 +0700
+
+SyntaxError (d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:32: syntax error, unexpected ',', expecting =>
+d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:33: syntax error, unexpected ',', expecting keyword_end
+...(:mtx_product).permit(:status), mtx_product_languages_attrib...
+...                               ^
+d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:38: syntax error, unexpected '}', expecting keyword_end):
+  app/controllers/mtx_products_controller.rb:32: syntax error, unexpected ',', expecting =>
+  app/controllers/mtx_products_controller.rb:33: syntax error, unexpected ',', expecting keyword_end
+  app/controllers/mtx_products_controller.rb:38: syntax error, unexpected '}', expecting keyword_end
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (177.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:02:01 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+111111111111
+{:price=>{"price"=>"3"}, :status=>{"status"=>"0"}, :mtx_product_languages_attributes=>[{:name=>{"name"=>"a1"}}, {:intro=>{"intro"=>"b2"}}, {:description=>{"description"=>"c2"}}]}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/mtx_products_controller.rb:43:in `exit'
+  app/controllers/mtx_products_controller.rb:43:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (170.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:02:10 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+Unpermitted parameter: status
+Unpermitted parameter: price
+Unpermitted parameters: intro, description
+Unpermitted parameters: name, description
+Unpermitted parameters: name, intro
+111111111111
+{:price=>{"price"=>"3"}, :status=>{"status"=>"0"}, :mtx_product_languages_attributes=>[{:name=>{"name"=>"a1"}}, {:intro=>{"intro"=>"b2"}}, {:description=>{"description"=>"c2"}}]}
+DEPRECATION WARNING: You attempted to assign a value which is not explicitly `true` or `false` ({"status"=>"0"}) to a boolean column. Currently this value casts to `false`. This will change to match Ruby's semantics, and will cast to `true` in Rails 5. If you would like to maintain the current behavior, you should explicitly handle the values you would like cast to `false`. (called from create at d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:45)
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (21.0ms)[0m  INSERT INTO `mtx_product` (`status`, `created_at`, `updated_at`) VALUES (0, '2015-10-07 17:02:10', '2015-10-07 17:02:10')
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `mtx_product_language` (`name`, `product_id`) VALUES ('{\"name\"=>\"a1\"}', 12)[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('{\"intro\"=>\"b2\"}', 12)
+Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('{\"intro\"=>\"b2\"}', 12)
+  [1m[36m (126.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 362ms (ActiveRecord: 268.0ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('{\"intro\"=>\"b2\"}', 12)):
+  app/controllers/mtx_products_controller.rb:48:in `block in create'
+  app/controllers/mtx_products_controller.rb:47:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (169.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:03:28 +0700
+
+SyntaxError (d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:35: syntax error, unexpected '}', expecting =>
+        {params.require(:mtx_product_language).permit(:name)},
+                                                             ^
+d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting =>
+        {params.require(:mtx_product_language).permit(:intro)},
+                                                              ^
+d:/RESEARCH/RubyOnRails/easily-order-food/app/controllers/mtx_products_controller.rb:37: syntax error, unexpected '}', expecting =>):
+  app/controllers/mtx_products_controller.rb:35: syntax error, unexpected '}', expecting =>
+  app/controllers/mtx_products_controller.rb:36: syntax error, unexpected '}', expecting =>
+  app/controllers/mtx_products_controller.rb:37: syntax error, unexpected '}', expecting =>
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (78.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (168.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:05:09 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+111111111111
+{:price=>nil, :status=>nil, :mtx_product_languages_attributes=>[{:name=>nil}, {:intro=>nil}, {:description=>nil}]}
+  [1m[35m (3.0ms)[0m  BEGIN
+  [1m[36mSQL (53.0ms)[0m  [1mINSERT INTO `mtx_product` (`created_at`, `updated_at`) VALUES ('2015-10-07 17:05:09', '2015-10-07 17:05:09')[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO `mtx_product_language` (`product_id`) VALUES (13)
+Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`product_id`) VALUES (13)
+  [1m[36m (235.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 419ms (ActiveRecord: 339.0ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`product_id`) VALUES (13)):
+  app/controllers/mtx_products_controller.rb:58:in `block in create'
+  app/controllers/mtx_products_controller.rb:57:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (75.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (165.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:05:51 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+111111111111
+{:price=>nil, :status=>nil, :mtx_product_languages_attributes=>[{:name=>nil}, {:intro=>nil}, {:description=>nil}]}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (70.0ms)[0m  [1mINSERT INTO `mtx_product` (`created_at`, `updated_at`) VALUES ('2015-10-07 17:05:51', '2015-10-07 17:05:51')[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO `mtx_product_language` (`product_id`) VALUES (14)
+Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`product_id`) VALUES (14)
+  [1m[36m (57.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 171.0ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`product_id`) VALUES (14)):
+  app/controllers/mtx_products_controller.rb:58:in `block in create'
+  app/controllers/mtx_products_controller.rb:57:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (77.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:06:33 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+00000
+{"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language", "controller"=>"mtx_products", "action"=>"create"}
+111111111111
+{:price=>nil, :status=>nil, :mtx_product_languages_attributes=>[{:name=>nil}, {:intro=>nil}, {:description=>nil}]}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `mtx_product` (`created_at`, `updated_at`) VALUES ('2015-10-07 17:06:33', '2015-10-07 17:06:33')[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO `mtx_product_language` (`product_id`) VALUES (15)
+Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`product_id`) VALUES (15)
+  [1m[36m (249.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 381ms (ActiveRecord: 296.0ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`product_id`) VALUES (15)):
+  app/controllers/mtx_products_controller.rb:61:in `block in create'
+  app/controllers/mtx_products_controller.rb:60:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (168.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:07:04 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+00000
+{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}
+111111111111
+{:price=>nil, :status=>nil, :mtx_product_languages_attributes=>[{:name=>nil}, {:intro=>nil}, {:description=>nil}]}
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (26.0ms)[0m  [1mINSERT INTO `mtx_product` (`created_at`, `updated_at`) VALUES ('2015-10-07 17:07:04', '2015-10-07 17:07:04')[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO `mtx_product_language` (`product_id`) VALUES (16)
+Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`product_id`) VALUES (16)
+  [1m[36m (44.0ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 123.0ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`product_id`) VALUES (16)):
+  app/controllers/mtx_products_controller.rb:61:in `block in create'
+  app/controllers/mtx_products_controller.rb:60:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (90.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (87.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (181.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:07:37 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+111111111111
+{:price=>nil, :status=>nil, :mtx_product_languages_attributes=>[{:name=>"a1"}, {:intro=>"b2"}, {:description=>"c2"}]}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO `mtx_product` (`created_at`, `updated_at`) VALUES ('2015-10-07 17:07:37', '2015-10-07 17:07:37')[0m
+  [1m[35mSQL (173.0ms)[0m  INSERT INTO `mtx_product_language` (`name`, `product_id`) VALUES ('a1', 17)
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('b2', 17)[0m
+Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('b2', 17)
+  [1m[35m (89.0ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 306.0ms)
+
+ActiveRecord::StatementInvalid (Mysql2::Error: Field 'name' doesn't have a default value: INSERT INTO `mtx_product_language` (`intro`, `product_id`) VALUES ('b2', 17)):
+  app/controllers/mtx_products_controller.rb:58:in `block in create'
+  app/controllers/mtx_products_controller.rb:57:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (74.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (167.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:09:44 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A01hY1PR9zC0tJzyPyhlRKKZ7nwPA/7yPe+57/C0WxUNS9iI/9G4vROItIh5qr/wfu81CBbpZf5pYNgvjYsEXg==", "mtx_product_language"=>{"name"=>"a1", "intro"=>"b2", "description"=>"c2"}, "mtx_product"=>{"price"=>"3", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+111111111111
+{:price=>"3", :status=>"0", :mtx_product_languages_attributes=>[{:name=>"a1", :intro=>"b2", :description=>"c2"}]}
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (59.0ms)[0m  INSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (3, 0, '2015-10-07 17:09:44', '2015-10-07 17:09:44')
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `mtx_product_language` (`name`, `intro`, `description`, `product_id`) VALUES ('a1', 'b2', 'c2', 18)[0m
+  [1m[35m (107.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/mtx_products/18
+Completed 302 Found in 294ms (ActiveRecord: 212.0ms)
+
+
+Started GET "/mtx_products/18" for 127.0.0.1 at 2015-10-08 00:09:44 +0700
+Processing by MtxProductsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mMtxProduct Load (4.0ms)[0m  [1mSELECT  `mtx_product`.* FROM `mtx_product` WHERE `mtx_product`.`id` = 18 LIMIT 1[0m
+  Rendered mtx_products/show.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<MtxProduct:0x00000008f1f010>):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @mtx_product.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/mtx_products/show.html.erb:5:in `_app_views_mtx_products_show_html_erb___168921233_98585180'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (76.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (166.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-08 00:10:43 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (15.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 199ms (Views: 192.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:10:51 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p14TeEtMZ2v5qkcmCYc5dRSV3E8680Yic1fPg9x98RqpWKqT50wo5l6Wb1xPBePByOMHOyMZ3S4n2K5DoUKuUQ==", "mtx_product_language"=>{"name"=>"a", "intro"=>"b", "description"=>"c"}, "mtx_product"=>{"price"=>"2", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+111111111111
+{:price=>"2", :status=>"1", :mtx_product_languages_attributes=>[{:name=>"a", :intro=>"b", :description=>"c"}]}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (29.0ms)[0m  [1mINSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (2, 1, '2015-10-07 17:10:51', '2015-10-07 17:10:51')[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `mtx_product_language` (`name`, `intro`, `description`, `product_id`) VALUES ('a', 'b', 'c', 19)
+  [1m[36m (95.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/mtx_products/19
+Completed 302 Found in 157ms (ActiveRecord: 125.0ms)
+
+
+Started GET "/mtx_products/19" for 127.0.0.1 at 2015-10-08 00:10:51 +0700
+Processing by MtxProductsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mMtxProduct Load (1.0ms)[0m  SELECT  `mtx_product`.* FROM `mtx_product` WHERE `mtx_product`.`id` = 19 LIMIT 1
+  Rendered mtx_products/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<MtxProduct:0x0000000fe6e808>):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @mtx_product.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/mtx_products/show.html.erb:5:in `_app_views_mtx_products_show_html_erb___168921233_98585180'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (59.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (126.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-08 00:11:29 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (11.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 275ms (Views: 182.0ms | ActiveRecord: 47.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:11:39 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BrUjuyDEHFGeAIBDiP5Z5u+AlbU07AQzO/EojKZYoU4Is5pQjMRT3Dk8qDnOfINSM/ZOwS0Gnz9vfklM22f+BQ==", "mtx_product_language"=>{"name"=>"fds ds", "intro"=>"f sdfsdf", "description"=>"s fs dfsd"}, "mtx_product"=>{"price"=>"342", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'mtx_product_languages_attributes' for MtxProduct.):
+  app/controllers/mtx_products_controller.rb:55:in `create'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (86.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (83.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (182.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:11:46 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BrUjuyDEHFGeAIBDiP5Z5u+AlbU07AQzO/EojKZYoU4Is5pQjMRT3Dk8qDnOfINSM/ZOwS0Gnz9vfklM22f+BQ==", "mtx_product_language"=>{"name"=>"fds ds", "intro"=>"f sdfsdf", "description"=>"s fs dfsd"}, "mtx_product"=>{"price"=>"342", "status"=>"1"}, "commit"=>"Create Mtx product language"}
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.0ms)[0m  INSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (342, 1, '2015-10-07 17:11:46', '2015-10-07 17:11:46')
+  [1m[36mSQL (259.0ms)[0m  [1mINSERT INTO `mtx_product_language` (`name`, `intro`, `description`, `product_id`) VALUES ('fds ds', 'f sdfsdf', 's fs dfsd', 20)[0m
+  [1m[35m (40.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/mtx_products/20
+Completed 302 Found in 461ms (ActiveRecord: 385.0ms)
+
+
+Started GET "/mtx_products/20" for 127.0.0.1 at 2015-10-08 00:11:47 +0700
+Processing by MtxProductsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mMtxProduct Load (1.0ms)[0m  [1mSELECT  `mtx_product`.* FROM `mtx_product` WHERE `mtx_product`.`id` = 20 LIMIT 1[0m
+  Rendered mtx_products/show.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<MtxProduct:0x00000006616240>):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @mtx_product.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/mtx_products/show.html.erb:5:in `_app_views_mtx_products_show_html_erb___168921233_98585180'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (80.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (175.0ms)
+
+
+Started GET "/mtx_products/new" for 127.0.0.1 at 2015-10-08 00:11:58 +0700
+Processing by MtxProductsController#new as HTML
+  Rendered mtx_products/_form.html.erb (10.0ms)
+  Rendered mtx_products/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 185ms (Views: 180.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mtx_products" for 127.0.0.1 at 2015-10-08 00:12:05 +0700
+Processing by MtxProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0GCt4PdrX5I0iiWijjW4dS0LWsbLFdrH/7FTvqXZYd3eZhQLW2sQH5O2DdjIt2LB8X2BstL/QcurPjJ+2OY+lg==", "mtx_product_language"=>{"name"=>"ert ertert", "intro"=>" fsd fsd fs", "description"=>"d fsd fsd"}, "mtx_product"=>{"price"=>"34", "status"=>"0"}, "commit"=>"Create Mtx product language"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (36.0ms)[0m  [1mINSERT INTO `mtx_product` (`price`, `status`, `created_at`, `updated_at`) VALUES (34, 0, '2015-10-07 17:12:05', '2015-10-07 17:12:05')[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `mtx_product_language` (`name`, `intro`, `description`, `product_id`) VALUES ('ert ertert', ' fsd fsd fs', 'd fsd fsd', 21)
+  [1m[36m (73.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/mtx_products/21
+Completed 302 Found in 142ms (ActiveRecord: 110.0ms)
+
+
+Started GET "/mtx_products/21" for 127.0.0.1 at 2015-10-08 00:12:05 +0700
+Processing by MtxProductsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mMtxProduct Load (0.0ms)[0m  SELECT  `mtx_product`.* FROM `mtx_product` WHERE `mtx_product`.`id` = 21 LIMIT 1
+  Rendered mtx_products/show.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for #<MtxProduct:0x0000000fbc4a58>):
+    2: 
+    3: <p>
+    4:   <strong>Name:</strong>
+    5:   <%= @mtx_product.name %>
+    6: </p>
+    7: 
+    8: <p>
+  app/views/mtx_products/show.html.erb:5:in `_app_views_mtx_products_show_html_erb___168921233_98585180'
+
+
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (134.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-10-08 00:12:42 +0700
 Processing by Rails::WelcomeController#index as HTML
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
-Completed 200 OK in 94ms (Views: 70.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 192.168.58.133 at 2015-09-30 21:33:20 -0700
-Cannot render console from 192.168.58.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-Processing by Rails::WelcomeController#index as HTML
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (1.3ms)
-Completed 200 OK in 21ms (Views: 7.3ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 192.168.58.1 at 2015-09-30 21:33:23 -0700
-Cannot render console from 192.168.58.1! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-Processing by Rails::WelcomeController#index as HTML
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
-Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-10-05 19:32:48 -0700
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.9ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.2ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-10-05 19:32:57 -0700
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.1ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.1ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.8ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.1ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (56.3ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-10-05 19:33:21 -0700
-
-Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `connect'
-  mysql2 (0.3.18) lib/mysql2/client.rb:70:in `initialize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
-  activerecord (4.2.4) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
-  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:571:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
-  activerecord (4.2.4) lib/active_record/connection_handling.rb:87:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:383:in `connection'
-  activerecord (4.2.4) lib/active_record/migration.rb:370:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
-  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
-  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
-  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
-  /home/sysadmin/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
-
-
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.7ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (28.1ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (52.9ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-10-05 19:33:43 -0700
-Processing by Rails::WelcomeController#index as HTML
-  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
-Completed 200 OK in 131ms (Views: 81.8ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/products" for 127.0.0.1 at 2015-10-07 14:53:46 +0700
-
-ActionController::RoutingError (No route matches [GET] "/products"):
-  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
-  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
-  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
-  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
-  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
-  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
-  railties (4.2.4) lib/rails/engine.rb:518:in `call'
-  railties (4.2.4) lib/rails/application.rb:165:in `call'
-  rack (1.6.4) lib/rack/lock.rb:17:in `call'
-  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
-  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
-  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
-  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
-  C:/Ruby21-x64/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
-
-
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (17.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (19.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (98.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.0ms)
-
-
-Started GET "/" for 127.0.0.1 at 2015-10-07 14:54:01 +0700
-Processing by Rails::WelcomeController#index as HTML
-  Rendered C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
-Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+  Rendered c:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)

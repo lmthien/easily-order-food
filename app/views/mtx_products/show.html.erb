@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mtx_product.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @mtx_product.price %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @mtx_product.status %>
+</p>
+
+<p>
+  <strong>Intro:</strong>
+  <%= @mtx_product.intro %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @mtx_product.description %>
+</p>
+
+<%= link_to 'Edit', edit_mtx_product_path(@mtx_product) %> |
+<%= link_to 'Back', mtx_products_path %>
