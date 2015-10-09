@@ -1,15 +1,15 @@
 <%= form_for(@productLang, url: mtx_product_path) do |f| %>
-  <% if @productLang.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@productLang.errors.count, "error") %> prohibited this mtx_product from being saved:</h2>
+    <% if @mtxProduct.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@mtxProduct.errors.count, "error") %> prohibited this mtx_product from being saved:</h2>
 
-      <ul>
-      <% @productLang.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+          <ul>
+            <% @mtxProduct.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
 
   <div class="field">
     <%= f.label :name %><br>
