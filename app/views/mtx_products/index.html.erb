@@ -1,7 +1,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing of products</h1>
+<h1>List of products</h1>
 
 <div class="nav">
   <%= link_to 'New product', new_mtx_product_path, class: "btn btn-primary" %>
@@ -11,8 +11,8 @@
 <table class="table table-bordered table-striped" id="sortTable">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Price</th>
+      <th><%= sortable "mtx_product_language.name", "Name" %></th>
+      <th><%= sortable "price", "Price" %></th>
       <th>Status</th>
       <th></th>
     </tr>
@@ -33,3 +33,5 @@
     <% end %>
   </tbody>
 </table>
+<%= paginate @mtxProducts %>
+

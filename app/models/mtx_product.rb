@@ -7,4 +7,6 @@ class MtxProduct < ActiveRecord::Base
     #has_and_belongs_to_many :medias
 
     accepts_nested_attributes_for :mtx_product_languages, :mtx_weekly_menu_details
+
+    scope :ordered_by_name, -> { joins(:mtx_product_languages).order('mtx_product_languages.name') }
 end

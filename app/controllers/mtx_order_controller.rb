@@ -1,4 +1,5 @@
 class MtxOrderController < ApplicationController
+  layout "admin"
   helper_method :sort_column, :sort_direction
 
   def show_list
@@ -10,17 +11,5 @@ class MtxOrderController < ApplicationController
 
   def show
     @order = MtxOrder.find(params[:id])
-  end
-
-  private
-
-  def sort_column
-    # MtxOrder.column_names.include?(params[:sort]) ? params[:sort] : "id"
-    # MtxOrder.joins(:mtx_user).select('`mtx_orders`.*, `mtx_user`.username as username').column_names.include?(params[:sort]) ? params[:sort] : "id"
-    params[:sort] != nil ? params[:sort] : "id"
-  end
-
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 end

@@ -1,5 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List of orders</h1>
+
 <div class="list">
-  <table>
+  <table class="table table-bordered table-striped" id="sortTable">
     <tr>
       <th><%= sortable "id", "Order Id" %></th>
       <th><%= sortable "mtx_user.username", "Username" %></th>

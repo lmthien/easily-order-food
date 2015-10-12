@@ -1,12 +1,18 @@
 class MtxProductsController < ApplicationController
   layout "admin"
+  helper_method :sort_column, :sort_direction
 
   before_action :set_mtx_product, only: [:show, :edit, :update, :destroy]
 
   # GET /mtx_products
   # GET /mtx_products.json
   def index
-    @mtxProducts = MtxProduct.all
+    #@mtxProducts = MtxProduct.all
+     # config.logger = Logger.new(STDOUT)
+     # logger.debug "1111111111111111"
+     # logger.debug config
+     # exit
+    @mtxProducts = MtxProduct.includes(:mtx_product_languages).order(sort_column + " " + sort_direction).page(params[:page]).per(3)
   end
 
   # GET /mtx_products/1
