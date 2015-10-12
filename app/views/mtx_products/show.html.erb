@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Listing of products</h1>
+
 <p>
   <strong>Name:</strong>
-  <%= @mtx_product.name %>
+  <%= @productLang.name %>
 </p>
 
 <p>
   <strong>Price:</strong>
-  <%= @mtx_product.price %>
+  <%= @product.price %>
 </p>
 
 <p>
   <strong>Status:</strong>
-  <%= @mtx_product.status %>
+  <%= @product.status %>
 </p>
 
 <p>
   <strong>Intro:</strong>
-  <%= @mtx_product.intro %>
+  <%= @productLang.intro %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @mtx_product.description %>
+  <%= @productLang.description %>
 </p>
 
-<%= link_to 'Edit', edit_mtx_product_path(@mtx_product) %> |
+<%= link_to 'Edit', edit_mtx_product_path(@mtxProduct) %> |
 <%= link_to 'Back', mtx_products_path %>

@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   resources :mtx_products
-  get 'weekly_menu/manage'
+  get 'weekly_menu/manage(/:dayOfWeek)' => 'weekly_menu#manage', as: :weekly_menu_manage, :defaults => {:dayOfWeek => "mon"}
+  post 'weekly_menu/manage' => 'weekly_menu#update', as: :update_weekly_menu
 
   EasilyOrderFood::Application.routes.draw do
     scope "(:locale)", :locale => /en|de/ do

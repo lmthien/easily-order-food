@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$("#weekday").bind("change", function(){
+   window.location = "/weekly_menu/manage/" + $(this).val()
+});

@@ -1,0 +1,44 @@
+<%= form_tag(weekly_menu_manage_path, method: :post) do %>
+    <div class="nav">
+      <h4>Listing of products on
+          <span class="btn-group">
+            <%= select_tag("weekday",  options_for_select(@ds4WeekDaySelect.invert, @dayOfWeek) ) %>
+          </span>
+      </h4>
+    </div>
+
+    <table class="table table-bordered table-striped" id="sortTable">
+    <thead>
+        <tr>
+          <th>&nbsp;</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% if !@productList.nil? %>
+        <% @productList.each do |p| %>
+            <%
+               @checked = false
+               if !@productOfWeekDay.nil?
+                 @productOfWeekDay.mtx_weekly_menu_details.each do |pOfDay|
+                   if pOfDay.product_id == p.id
+                     @checked = true
+                   end
+                 end
+               end
+            %>
+            <tr>
+              <td><%= check_box_tag("ids[]", p.id, @checked)%></td>
+              <td><%= p.mtx_product_languages.first.name %></td>
+              <td><%= p.price %></td>
+            </tr>
+        <% end %>
+    <% end%>
+    </tbody>
+    </table>
+
+    <div class="actions">
+      <input type="submit" value="Submit" class="btn btn-primary">
+    </div>
+<% end %>
