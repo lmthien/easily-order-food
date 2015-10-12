@@ -19,6 +19,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# Pagination
+#gem 'will_paginate', '3.0.pre4'
+gem 'kaminari'
 
 
 group :development, :test do

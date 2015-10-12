@@ -1,0 +1,32 @@
+<div class="list">
+  <table>
+    <tr>
+      <th><%= sortable "id", "User Id" %></th>
+      <th><%= sortable "username", "Username" %></th>
+      <!--<th></th>-->
+    </tr>
+    <% @users.each do |user| %>
+        <tr data-href="<%= mtx_user_path(user) %>">
+          <td><%= user.id %></td>
+          <td><%= user.username %></td>
+          <!--<td><%= link_to 'View detail', mtx_user_path(user) %></td>-->
+        </tr>
+    <% end %>
+    <tr>
+    </tr>
+  </table>
+  <%= paginate @users %>
+</div>
+<script>
+    $("tr[data-href]").click(function () {
+        var link = $(this).data("href");
+        window.location = link;
+//      $.ajax({
+//          url: link,
+//          type: "GET",
+//          success: function(result){
+//              $("body").html(result);
+//          }
+//      })
+    })
+</script>

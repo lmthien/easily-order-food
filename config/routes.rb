@@ -3,11 +3,28 @@ Rails.application.routes.draw do
   resources :mtx_products
   get 'weekly_menu/manage'
 
+  EasilyOrderFood::Application.routes.draw do
+    scope "(:locale)", :locale => /en|de/ do
+      root :to => 'home#index'
+      get "home/index"
+    end
+  end
+  # root 'home#index'
+
+  # Routes for mtx_order
+  #get 'mtx_order' => 'mtx_order#show_list'
+  get 'mtx_order/show_list' => 'mtx_order#show_list'
+  resources :mtx_order
+
+  # Routes for mtx_user
+  get 'mtx_user/show_list' => 'mtx_user#show_list'
+  resources :mtx_user
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
