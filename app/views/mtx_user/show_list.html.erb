@@ -7,31 +7,24 @@
       <th><%= sortable "id", I18n.t('activerecord.attributes.user.id') %></th>
       <th><%= sortable "username", I18n.t('activerecord.attributes.user.username') %></th>
       <th><%= sortable "fullname", I18n.t('activerecord.attributes.user.fullname') %></th>
-      <!--<th></th>-->
+      <th></th>
     </tr>
     <% @users.each do |user| %>
         <tr data-href="<%= mtx_user_path(user) %>">
-          <td><%= user.id %></td>
-          <td><%= user.username %></td>
-          <td><%= user.fullname %></td>
-          <!--<td><%= link_to 'View detail', mtx_user_path(user) %></td>-->
-        </tr>
+          <td><%= link_to user.id,  mtx_user_path(user.id) %></td>
+          <td><%= link_to user.username,  mtx_user_path(user.id) %></td>
+          <td><%= link_to user.fullname,  mtx_user_path(user.id) %></td>
+          <td>
+              <% if user.active == 1%>
+                <%= link_to 'Active', "#", data_user_id: user.id, data_user_status: 0, class: "active_user" %>
+              <% else %>
+                <%= link_to 'Unactive', "#", data_user_id: user.id, data_user_status: 1, class: "active_user"%>
+              <% end %>
+          </td>
+    </tr>
     <% end %>
     <tr>
     </tr>
   </table>
-  <div><%= paginate @users %></div>
+  <%= paginate @users %>
 </div>
-<script>
-    $("tr[data-href]").click(function () {
-        var link = $(this).data("href");
-        window.location = link;
-//      $.ajax({
-//          url: link,
-//          type: "GET",
-//          success: function(result){
-//              $("body").html(result);
-//          }
-//      })
-    })
-</script>

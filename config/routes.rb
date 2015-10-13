@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   # Routes for mtx_user
   get 'mtx_user/show_list' => 'mtx_user#show_list'
+  get 'mtx_user/change_status/:id/:status' => 'mtx_user#changeStatus', as: :mtx_user_change_status
 
   #Phu
   get 'mtx_user/sign_in' => 'mtx_user#sign_in', as: :sign_in

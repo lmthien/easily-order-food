@@ -4,7 +4,7 @@ class MtxUserController < ApplicationController
   include MtxUserHelper
 
   def show_list
-    @users = MtxUser.order(sort_column + " " + sort_direction).page(params[:page]).per(2)
+    @users = MtxUser.order(sort_column + " " + sort_direction).page(params[:page]).per(20)
     # @orders = MtxOrder.joins(:mtx_user).select('`mtx_orders`.*, `mtx_user`.username as username').order(sort_column + " " + sort_direction).page(params[:page]).per(3)
     # @orders_scope = MtxOrder.ordered_by_username.page(params[:page]).per(2)
     authorize! :show_list, @user
@@ -12,6 +12,16 @@ class MtxUserController < ApplicationController
 
   def show
     @user = MtxUser.find(params[:id])
+  end
+
+
+  def changeStatus
+    @user = MtxUser.find(params[:id])
+    @user.active = params[:status]
+    @user.save
+    render json: @user
+
+    #redirect_to mtx_user_show_list_path, notice: 'User was successfully created.'
   end
 
   # Phu tran
@@ -65,5 +75,4 @@ class MtxUserController < ApplicationController
     params.require(:mtx_user).permit(:fullname, :username, :email, :password, :password_confirmation)
   end
   # End
-
 end
