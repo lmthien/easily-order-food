@@ -19,10 +19,29 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-de:
-  hello: "Hello world"
+vi:
+  hello: "xin chao"
   views:
       pagination:
-        previous: "&lt; Previous"
-        next: "Next &gt;"
+        previous: "&lt; Trước"
+        next: "Sau &gt;"
+        first: "&laquo; Đầu"
+        last: "Cuối &raquo;"
         truncate: "..."
+      home:
+        order_list: 'Đơn hàng'
+        user_list: 'Người sử dụng'
+        languages:
+          english: 'Tiếng Anh'
+          vietnamese: 'Tiếng Việt'
+  activerecord:
+      models:
+        order: 'Đơn hàng'
+      attributes:
+        order:
+          id: 'Mã đơn hàng'
+          total: 'Tổng cộng'
+        user:
+          id: 'Mã tài khoản'
+          username: 'Tên tài khoản'
+          fullname: 'Họ và tên'

@@ -1,9 +1,9 @@
 <div class="list">
-  <table>
+  <table class="table table-striped table-hover">
     <tr>
-      <th><%= sortable "id", "Order Id" %></th>
-      <th><%= sortable "mtx_user.username", "Username" %></th>
-      <th><%= sortable "total", "Total" %></th>
+      <th><%= sortable "id", I18n.t('activerecord.attributes.order.id') %></th>
+      <th><%= sortable "mtx_user.username", I18n.t('activerecord.attributes.user.username') %></th>
+      <th><%= sortable "total", I18n.t('activerecord.attributes.order.total') %></th>
       <!--<th></th>-->
     </tr>
     <% @orders.each do |order| %>
@@ -17,7 +17,7 @@
     <tr>
     </tr>
   </table>
-  <%= paginate @orders %>
+  <div><%= paginate @orders %></div>
 </div>
 <script>
     $("tr[data-href]").click(function () {

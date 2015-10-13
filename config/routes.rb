@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'weekly_menu/manage' => 'weekly_menu#update', as: :update_weekly_menu
 
   EasilyOrderFood::Application.routes.draw do
-    scope "(:locale)", :locale => /en|de/ do
+    scope "(:locale)", :locale => /en|vi/ do
       root :to => 'home#index'
       get "home/index"
     end

@@ -22,6 +22,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Pagination
 #gem 'will_paginate', '3.0.pre4'
 gem 'kaminari'
+# Bootstrap
+gem 'bootstrap-sass'
 
 
 group :development, :test do
