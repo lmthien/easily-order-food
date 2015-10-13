@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+.language_div {
+    float: right;
+    color: white;
+}
+
+.language_div > p {
+    color: white;
+}
+
+.language_div > p > a {
+    color: gray !important;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.menu_item_information {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

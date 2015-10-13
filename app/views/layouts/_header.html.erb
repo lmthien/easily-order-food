@@ -4,26 +4,29 @@
 
     <a href="#1" class="logo-link"><img src="/assets/logo.png" alt="RecipeFinder logo" class="logo"></a>
 
-    <!--<p>-->
-      <!--<%= link_to_unless I18n.locale == :en, I18n.t('views.home.languages.english'), locale: :en %>-->
-      <!--|-->
-      <!--<%= link_to_unless I18n.locale == :vi, I18n.t('views.home.languages.vietnamese'), locale: :vi %>-->
-    <!--</p>-->
     <nav>
       <ul>
-        <li><a href="#2">Login</a></li>
-        <li><a href="#3">Customer</a></li>
+        <li><a href="#2"><%= I18n.t('views.header.login')%></a></li>
+        <li><a href="#3"><%= I18n.t('views.header.customer')%></a></li>
         <li>
           <div class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown">Administrator<span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown"><%= I18n.t('views.header.administrator')%><span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-                <li><%= link_to I18n.t('views.home.order_list'), {:controller => '/mtx_order', :action => 'show_list'} %></li>
-                <li><%= link_to I18n.t('views.home.user_list'), {:controller => '/mtx_user', :action => 'show_list'} %></li>
+                <li><%= link_to I18n.t('views.header.order_list'), {:controller => '/mtx_order', :action => 'show_list'} %></li>
+                <li><%= link_to I18n.t('views.header.user_list'), {:controller => '/mtx_user', :action => 'show_list'} %></li>
             </ul>
           </div>
         </li>
       </ul>
     </nav>
+
+    <div class="language_div">
+        <p>
+          <%= link_to_unless I18n.locale == :en, I18n.t('views.header.languages.english'), locale: :en %>
+          |
+          <%= link_to_unless I18n.locale == :vi, I18n.t('views.header.languages.vietnamese'), locale: :vi %>
+        </p>
+    </div>
 
   </div><!-- header-inside -->
 

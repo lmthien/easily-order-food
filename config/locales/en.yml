@@ -28,12 +28,16 @@ en:
         first: "&laquo; First"
         last: "Last &raquo;"
         truncate: "..."
-      home:
+      header:
+        administrator: 'Administrator'
         order_list: 'Order list'
         user_list: 'User list'
         languages:
           english: 'English'
           vietnamese: 'Vietnamese'
+        login: 'Log In'
+        logout: 'Log Out'
+        customer: 'Customer'
   activerecord:
       models:
         order: 'Order'

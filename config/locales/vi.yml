@@ -28,12 +28,16 @@ vi:
         first: "&laquo; Đầu"
         last: "Cuối &raquo;"
         truncate: "..."
-      home:
+      header:
+        administrator: 'Quản trị'
         order_list: 'Đơn hàng'
-        user_list: 'Người sử dụng'
+        user_list: 'Thành viên'
         languages:
           english: 'Tiếng Anh'
           vietnamese: 'Tiếng Việt'
+        login: 'Đăng nhập'
+        logout: 'Đăng xuất'
+        customer: 'Khách hàng'
   activerecord:
       models:
         order: 'Đơn hàng'
