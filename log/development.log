@@ -4956,3 +4956,7 @@ Completed 200 OK in 1304ms (Views: 1296.0ms | ActiveRecord: 2.0ms)
   Rendered /Users/sitadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
   Rendered /Users/sitadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
   Rendered /Users/sitadmin/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (364.0ms)
+Processing by MtxOrderController#show_list as HTML
+  Parameters: {"locale"=>"en"}
+  Rendered mtx_order/show_list.html.erb within layouts/admin (246.4ms)
+Completed 200 OK in 1715ms (Views: 1313.1ms | ActiveRecord: 280.2ms)
