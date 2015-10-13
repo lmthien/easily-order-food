@@ -1,2 +1,38 @@
-<h1>Show page</h1>
-<a><%= @user.id %></a>
+<p id="notice"><%= notice %></p>
+
+<h1>Detail information of user</h1>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Fullname:</strong>
+  <%= @user.fullname %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <% if @user.active == 1 %>
+      Active
+  <% else %>
+      Inactive
+  <% end %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <% if @user.type == 1 %>
+      System
+  <% else %>
+      Customer
+  <% end %>
+</p>
+
+<%= link_to 'Back', mtx_user_show_list_path %>
