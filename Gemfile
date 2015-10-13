@@ -22,7 +22,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Pagination
 #gem 'will_paginate', '3.0.pre4'
 gem 'kaminari'
-
+# Bootstraprails g cancan:ability
+gem 'bootstrap-sass'
+# Phu: using gem cancancan for authorization and permission
+gem 'cancancan', '~> 1.13.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

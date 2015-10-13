@@ -1,0 +1,20 @@
+<h1 class="disNone">Sign in</h1>
+
+
+<% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+<%= form_tag process_login_path do %>
+    <div class="field inputLogin">
+      <%= label_tag :username %> </br>
+      <%= text_field_tag :username %>
+    </div>
+    <div class="field inputLogin">
+      <%= label_tag :password %> </br>
+      <%= password_field_tag :password %>
+    </div>
+    </br>
+    <div class="actions inputLogin ">
+      <%= submit_tag "Log In" %>
+    </div>
+<% end %>

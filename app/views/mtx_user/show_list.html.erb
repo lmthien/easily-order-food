@@ -2,11 +2,11 @@
 <h1>List of users</h1>
 
 <div class="list">
-<table class="table table-bordered table-striped" id="sortTable">
+    <table class="table table-bordered table-striped table-hover" id="sortTable">
     <tr>
-      <th><%= sortable "id", "User Id" %></th>
-      <th><%= sortable "username", "Username" %></th>
-      <th><%= sortable "fullname", "Fullname" %></th>
+      <th><%= sortable "id", I18n.t('activerecord.attributes.user.id') %></th>
+      <th><%= sortable "username", I18n.t('activerecord.attributes.user.username') %></th>
+      <th><%= sortable "fullname", I18n.t('activerecord.attributes.user.fullname') %></th>
       <th></th>
     </tr>
     <% @users.each do |user| %>
@@ -21,7 +21,7 @@
                 <%= link_to 'Unactive', "#", data_user_id: user.id, data_user_status: 1, class: "active_user"%>
               <% end %>
           </td>
-        </tr>
+    </tr>
     <% end %>
     <tr>
     </tr>
