@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-
+  get 'home/index' => 'home#index', as: :home
   resources :mtx_products
   get 'weekly_menu/manage(/:dayOfWeek)' => 'weekly_menu#manage', as: :weekly_menu_manage, :defaults => {:dayOfWeek => "mon"}
   post 'weekly_menu/manage' => 'weekly_menu#update', as: :update_weekly_menu
+
+
 
   EasilyOrderFood::Application.routes.draw do
     scope "(:locale)", :locale => /en|vi/ do
@@ -19,6 +21,12 @@ Rails.application.routes.draw do
 
   # Routes for mtx_user
   get 'mtx_user/show_list' => 'mtx_user#show_list'
+
+  #Phu
+  get 'mtx_user/sign_in' => 'mtx_user#sign_in', as: :sign_in
+  get 'mtx_user/destroy' => 'mtx_user#destroy', as: :log_out
+  post 'mtx_user/process_login' => 'mtx_user#process_login', as: :process_login
+  #End
   resources :mtx_user
 
   # The priority is based upon order of creation: first created -> highest priority.
