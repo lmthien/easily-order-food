@@ -21,7 +21,7 @@ CREATE TABLE `mtx_user` (
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
   `active` smallint(6) DEFAULT NULL,
-  `type` int(11) DEFAULT '1',
+  `user_type` int(11) DEFAULT '2',
   `created_id` int(11) DEFAULT NULL,
   `updated_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
