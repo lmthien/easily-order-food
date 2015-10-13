@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="944175e6-6438-4d9e-afd3-62b19976cc42" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/config.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.Gemfile.swp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Development__easily_order_food.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Production__easily_order_food.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/spec__easily_order_food.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/runConfigurations/test__easily_order_food.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_products/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_products/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_products/_form_edit.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_products/_form_edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/admin.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/admin.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/easily-order-food.iml" afterPath="$PROJECT_DIR$/.idea/easily-order-food.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_products/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_products/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_products/index.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_products/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mtx_order.rb" afterPath="$PROJECT_DIR$/app/models/mtx_order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/mtx_order_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/mtx_order_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/mtx_order_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/mtx_order_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/mtx_product.rb" afterPath="$PROJECT_DIR$/app/models/mtx_product.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/mtx_products_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/mtx_products_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/mtx_user_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/mtx_user_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/mtx_user_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/mtx_user_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_products/new.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_products/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_order/show.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_order/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_products/show.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_products/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_user/show.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_user/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_order/show_list.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_order/show_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/mtx_user/show_list.html.erb" afterPath="$PROJECT_DIR$/app/views/mtx_user/show_list.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="944175e6-6438-4d9e-afd3-62b19976cc42" name="Default" comment="" />
     <ignored path="easily-order-food.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -837,7 +804,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1920" height="982" extended-state="7" />
+    <frame x="4" y="23" width="1920" height="982" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3397231" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
