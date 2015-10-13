@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   # Routes for mtx_user
   get 'mtx_user/show_list' => 'mtx_user#show_list'
+  get 'mtx_user/change_status/:id/:status' => 'mtx_user#changeStatus', as: :mtx_user_change_status
   resources :mtx_user
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -12,9 +12,9 @@
     </tr>
     <% @orders.each do |order| %>
         <tr data-href="<%= mtx_order_path(order) %>">
-          <td><%= order.id %></td>
-          <td><%= order.mtx_user.username %></td>
-          <td><%= order.total %></td>
+          <td><%= link_to order.id,  mtx_order_path(order) %></td>
+          <td><%= link_to order.mtx_user.username,  mtx_order_path(order) %></td>
+          <td><%= link_to order.total,  mtx_order_path(order) %></td>
           <!--<td><%= link_to 'View detail', mtx_order_path(order) %></td>-->
         </tr>
     <% end %>
@@ -23,16 +23,3 @@
   </table>
   <%= paginate @orders %>
 </div>
-<script>
-    $("tr[data-href]").click(function () {
-        var link = $(this).data("href");
-        window.location = link;
-//      $.ajax({
-//          url: link,
-//          type: "GET",
-//          success: function(result){
-//              $("body").html(result);
-//          }
-//      })
-    })
-</script>

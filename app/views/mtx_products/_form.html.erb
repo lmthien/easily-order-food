@@ -1,4 +1,4 @@
-<%= form_for(@productLang, url: mtx_products_path) do |f| %>
+<%= form_for(@productLang, url: mtx_products_path, :html => { :multipart => true }) do |f| %>
   <% if @mtxProduct.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@mtxProduct.errors.count, "error") %> prohibited this mtx_product from being saved:</h2>
@@ -23,6 +23,10 @@
         <div class="field">
           <%= p.label :status %><br>
           <%= p.check_box :status %>
+        </div>
+        <div class="field">
+          <%= p.label "Image" %><br>
+          <%= p.file_field :thumb %>
         </div>
     <% end %>
 
