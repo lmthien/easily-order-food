@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'home/index' => 'home#index', as: :home
+  get 'home/permission_message' => 'home#permission_message', as: :permission_message
   resources :mtx_products
   get 'weekly_menu/manage(/:dayOfWeek)' => 'weekly_menu#manage', as: :weekly_menu_manage, :defaults => {:dayOfWeek => "mon"}
   post 'weekly_menu/manage' => 'weekly_menu#update', as: :update_weekly_menu
