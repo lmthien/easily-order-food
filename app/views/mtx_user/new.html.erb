@@ -2,29 +2,31 @@
 
 <%= form_for @user, :url => {:action => "create"} do |f| %>
     <%= render 'shared/error_messages' %>
+    <div class="col-xs-3">
+      <div class="field ">
+        <label>Full Name</label><br/>
+        <input type="text" name="mtx_user[fullname]" class="form-control" id="fullname" placeholder="Full Name">
+      </div>
+      <div class="field ">
+        <label>User Name</label><br/>
+        <input type="text" name="mtx_user[username]" class="form-control" id="username" placeholder="User Name">
+      </div>
+      <div class="field ">
+        <label>Password</label><br/>
+        <input type="password" name="mtx_user[password]" class="form-control" id="password" placeholder="Password">
+      </div>
+      <div class="field ">
+        <label>Confirmation</label> <br/>
+        <input type="password" name="mtx_user[password_confirmation]" class="form-control" id="password_confirmation" placeholder="Password Confirmation">
+      </div>
+      <div class="field ">
+        <label>Email</label><br/>
+        <input type="text" name="mtx_user[email]" class="form-control " id="email" placeholder="Email">
+      </div>
+      </br>
+      <div class="actions">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
 
-    <div class="field">
-      <%= f.label :fullname %><br/>
-      <%= f.text_field :fullname %>
-    </div>
-    <div class="field">
-      <%= f.label :username %><br/>
-      <%= f.text_field :username %>
-    </div>
-    <div class="field">
-      <%= f.label :password %><br/>
-      <%= f.password_field :password %>
-    </div>
-    <div class="field">
-      <%= f.label :password_confirmation, "Confirmation" %> <br/>
-      <%= f.password_field :password_confirmation %>
-    </div>
-    <div class="field">
-      <%= f.label :email %><br/>
-      <%= f.text_field :email %>
-    </div>
-    </br>
-    <div class="actions">
-      <%= f.submit "Sign up" %>
-    </div>
 <% end %>

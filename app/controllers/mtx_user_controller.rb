@@ -51,7 +51,7 @@ class MtxUserController < ApplicationController
       flash.now[:danger] = 'Please enter username/password'
       render 'sign_in'
     else
-      user = MtxUser.find_by(username: params[:username], password: params[:password])
+      user = MtxUser.authenticate(params[:username], params[:password])
       if user
         log_in(user)
         redirect_to root_url
@@ -68,6 +68,7 @@ class MtxUserController < ApplicationController
     log_out
     redirect_to root_url
   end
+
 
   private
 
