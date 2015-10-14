@@ -184,3 +184,15 @@
 .inputLogin {
     margin-top:10px;
 }
+
+.cart {
+    float: right;
+}
+
+.dispNone {
+    display: none;
+}
+
+.user_name_label {
+    color: white;
+}

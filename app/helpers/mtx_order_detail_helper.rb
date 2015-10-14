@@ -1,0 +1,2 @@
+module MtxOrderDetailHelper
+end

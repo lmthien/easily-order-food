@@ -38,3 +38,20 @@ $(".active_user").bind('click', function () {
         }
     })
 })
+
+add_item = function(product_id){
+    var success = function(data){
+        if(data.length > 0) {
+            $('.cart').show();
+            $('#addedbtn'+product_id).show();
+            $('#addbtn'+product_id).hide();
+        } else {
+            $('.cart').hide();
+        }
+    };
+    $.ajax({
+        type: "GET",
+        url: "/home/add_item?product_id=" + product_id,
+        success: success
+    })
+}

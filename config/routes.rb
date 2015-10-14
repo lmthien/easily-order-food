@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     scope "(:locale)", :locale => /en|vi/ do
       root :to => 'home#index'
       get "home/index"
+      get 'home/add_item' => 'home#add_item'
     end
   end
   # root 'home#index'
@@ -18,6 +19,8 @@ Rails.application.routes.draw do
   #get 'mtx_order' => 'mtx_order#show_list'
   get 'mtx_order/show_list' => 'mtx_order#show_list'
   resources :mtx_order
+
+  resources :mtx_order_detail
 
   # Routes for mtx_user
   get 'mtx_user/show_list' => 'mtx_user#show_list'
@@ -67,7 +70,7 @@ Rails.application.routes.draw do
     #     post 'toggle'
     #   end
 
-  
+
       # collection do
       #   get 'sold'
       # end

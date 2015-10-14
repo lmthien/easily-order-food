@@ -4,6 +4,9 @@ class PlaceOrdersController < ApplicationController
 
     @daily_menu = MtxWeeklyMenu.find(1)
     @daily_menu_detail = @daily_menu.mtx_weekly_menu_details.all
+      @items = session[:order_items]
+    puts '123'
+    puts @items
   end
 
   def create_order

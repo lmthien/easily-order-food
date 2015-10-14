@@ -10,11 +10,12 @@
         |
         <%= link_to_unless I18n.locale == :vi, I18n.t('views.header.languages.vietnamese'), locale: :vi %>
       </p>
+      </br>
     </div>
     <nav>
       <ul>
         <% if logged_in? %>
-            <li>
+            <li class="user_name_label">
               <%= current_user.fullname %>
             </li>
             <li>
