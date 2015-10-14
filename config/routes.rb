@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  resources :place_orders do
+    collection do
+      post '/create_order' => 'place_orders#create_order'
+    end
+
+  end
+
+  # get 'place_orders/index'
+  # get 'place_orders/create_order' => 'place_orders#create_order'
+
+  # rake routes < routes.txt
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -7,37 +19,51 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+    # get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+    # get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+    # resources :products :except (:destroy, :update, :list) do
+    #   resources :items
+    # end
+
 
   # Example resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+    # resources :products do
+    #   member do
+    #     get 'short'
+    #     post 'toggle'
+    #   end
+
+  
+      # collection do
+      #   get 'sold'
+      # end
+
+
+    # end
 
   # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+    # resources :products do
+    #   resources :comments, :sales
+    #   resource :seller
+    # end
 
   # Example resource route with more complex sub-resources:
-  #   resources :products do
-  #     resources :comments
+    # resources :products do
+    #   resources :comments
+    #   resources :sales do
+    #     get 'recent', on: :collection
+    #   end
+
+
+  # # or we can use this way
   #     resources :sales do
-  #       get 'recent', on: :collection
+  #       collection do
+  #         get 'recent'
+  #       end
   #     end
   #   end
 
