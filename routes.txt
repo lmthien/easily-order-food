@@ -1,0 +1,10 @@
+                   Prefix Verb   URI Pattern                          Controller#Action
+create_order_place_orders GET    /place_orders/create_order(.:format) place_orders#create_order
+             place_orders GET    /place_orders(.:format)              place_orders#index
+                          POST   /place_orders(.:format)              place_orders#create
+          new_place_order GET    /place_orders/new(.:format)          place_orders#new
+         edit_place_order GET    /place_orders/:id/edit(.:format)     place_orders#edit
+              place_order GET    /place_orders/:id(.:format)          place_orders#show
+                          PATCH  /place_orders/:id(.:format)          place_orders#update
+                          PUT    /place_orders/:id(.:format)          place_orders#update
+                          DELETE /place_orders/:id(.:format)          place_orders#destroy

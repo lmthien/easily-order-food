@@ -21,3 +21,28 @@
 
 en:
   hello: "Hello world"
+  views:
+      pagination:
+        previous: "&lt; Previous"
+        next: "Next &gt;"
+        first: "&laquo; First"
+        last: "Last &raquo;"
+        truncate: "..."
+      home:
+        order_list: 'Order list'
+        user_list: 'User list'
+        languages:
+          english: 'English'
+          vietnamese: 'Vietnamese'
+  activerecord:
+      models:
+        order: 'Order'
+      attributes:
+        order:
+          id: 'Order Id'
+          total: 'Total'
+        user:
+          id: 'User Id'
+          username: 'Username'
+          fullname: 'Fullname'
+

@@ -1,0 +1,50 @@
+<%= form_for(@productLang, url: mtx_product_path, :html => { :multipart => true }) do |f| %>
+    <% if @mtxProduct.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@mtxProduct.errors.count, "error") %> prohibited this mtx_product from being saved:</h2>
+
+          <ul>
+            <% @mtxProduct.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+    <%= fields_for @productLang.mtx_product do |p| %>
+        <div class="field">
+          <%= p.label :price %><br>
+          <%= p.number_field :price %>
+        </div>
+        <div class="field">
+          <%= p.label :status %><br>
+          <%= p.check_box :status %>
+        </div>
+        <div class="field">
+          <%= p.label "Image" %><br>
+          <%= p.file_field :thumb %>
+        </div>
+        <p>
+          <strong>Iamge:</strong>
+          <%= image_tag "uploads/" + @product.thumb.to_s, :style => "width: 100px; height: 100px;"  %>
+        </p>
+    <% end %>
+
+  <div class="field">
+    <%= f.label :intro %><br>
+    <%= f.text_area :intro %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+      <%= link_to 'Back', mtx_products_path, class: "btn btn-primary"  %>
+    </div>
+<% end %>

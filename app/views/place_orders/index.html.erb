@@ -1,0 +1,39 @@
+<h1>Place Order</h1>
+<p>Show list product on daily menu</p>
+<%= form_tag("place_orders/create_order", method: "post") do %>
+<div class="CSSTableGenerator">
+  <table>
+    <tr>
+      <td>
+        Food
+      </td>
+      <td>
+        Price
+      </td>
+      <td>
+        Order
+      </td>
+    </tr>
+    <% @daily_menu_detail.each do |daily_menu_detail| %>
+        <tr>
+          <td>
+            <%= daily_menu_detail.mtx_product.mtx_product_languages.first.name %>
+          </td>
+          <td>
+            <%= daily_menu_detail.mtx_product.price %>
+          </td>
+          <td>
+            <input type="text" name="order">
+          </td>
+        </tr>
+    <% end %>
+    <tr>
+      <td></td>
+      <td>Total:</td>
+      <td><input type="text" name="total"></td>
+    </tr>
+  </table>
+</div>
+<%= text_field_tag(:price_text) %>
+<%= submit_tag("Create Order") %>
+<% end %>

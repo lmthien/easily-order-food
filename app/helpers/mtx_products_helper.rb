@@ -1,0 +1,2 @@
+module MtxProductsHelper
+end

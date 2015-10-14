@@ -5,10 +5,31 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <meta charset="utf-8">
+
+  <title>RecipeFinder</title>
+  <meta name="description" content="Find and rate your favourite recipes.">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Remove these two references once the files are in root with these file names -->
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.jpg">
+
+  <link rel="stylesheet" href="/assets/normalize.css">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <%= stylesheet_link_tag 'theme-startbootstrap/css/bootstrap.min', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'theme-startbootstrap/js/jquery', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'theme-startbootstrap/js/bootstrap.min','theme-startbootstrap/js/jquery', 'data-turbolinks-track' => true %>
+  <!--[if lt IE 9]>
+  <!--<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>-->
+  <![endif]-->
 </head>
 <body>
-
+<%= render "layouts/header.html" %>
 <%= yield %>
+<%= render "layouts/footer.html" %>
 
 </body>
 </html>

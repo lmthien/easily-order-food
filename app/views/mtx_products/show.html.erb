@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing of products</h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @productLang.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @product.status %>
+</p>
+<p>
+  <strong>Iamge:</strong>
+  <%= image_tag "uploads/" + @product.thumb, :style => "width: 100px; height: 100px;"  %>
+</p>
+
+<p>
+  <strong>Intro:</strong>
+  <%= @productLang.intro %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @productLang.description %>
+</p>
+
+<%= link_to 'Edit', edit_mtx_product_path(@mtxProduct), class: "btn btn-primary"%>
+<%= link_to 'Back', mtx_products_path, class: "btn btn-primary"%>

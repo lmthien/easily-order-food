@@ -1,0 +1,2 @@
+module WeeklyMenuHelper
+end

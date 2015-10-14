@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>List of orders</h1>
+
+<div class="list">
+  <table class="table table-bordered table-striped table-hover" id="sortTable">
+    <tr>
+      <th><%= sortable "id", I18n.t('activerecord.attributes.order.id') %></th>
+      <th><%= sortable "mtx_user.username", I18n.t('activerecord.attributes.user.username') %></th>
+      <th><%= sortable "total", I18n.t('activerecord.attributes.order.total') %></th>
+      <!--<th></th>-->
+    </tr>
+    <% @orders.each do |order| %>
+        <tr data-href="<%= mtx_order_path(order) %>">
+          <td><%= link_to order.id,  mtx_order_path(order) %></td>
+          <td><%= link_to order.mtx_user.username,  mtx_order_path(order) %></td>
+          <td><%= link_to order.total,  mtx_order_path(order) %></td>
+          <!--<td><%= link_to 'View detail', mtx_order_path(order) %></td>-->
+        </tr>
+    <% end %>
+    <tr>
+    </tr>
+  </table>
+  <%= paginate @orders %>
+</div>

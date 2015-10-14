@@ -1,0 +1,49 @@
+// Place all the styles related to the mtx_order controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.list {
+  padding-top: 50px;
+}
+
+.list table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.list tr {
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.list tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.list th {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  background-color: #87053e;
+}
+
+.list th a {
+  color: white;
+}
+
+.list td {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.list th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.list th .asc {
+  background-image: url(/assets/up_arrow.gif);
+}
+
+.list th .desc {
+  background-image: url(/assets/down_arrow.gif);
+}
