@@ -23,17 +23,20 @@
             <%= daily_menu_detail.mtx_product.price %>
           </td>
           <td>
-            <input type="text" name="order">
+            <input type="text" value="0" class="product_item" attr_price="<%= daily_menu_detail.mtx_product.price %>"
+                   onkeypress="return isNumber(event)"
+                   onchange="calculateTotal();"
+                   onkeyup="this.onchange();"
+                   name='product[<%= daily_menu_detail.mtx_product.id %>_<%= daily_menu_detail.mtx_product.price %>]'>
           </td>
         </tr>
     <% end %>
     <tr>
       <td></td>
       <td>Total:</td>
-      <td><input type="text" name="total"></td>
+      <td><input type="text" name="total_order" id="total_order" onkeypress="return false;"></td>
     </tr>
   </table>
 </div>
-<%= text_field_tag(:price_text) %>
 <%= submit_tag("Create Order") %>
 <% end %>

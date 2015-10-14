@@ -15,19 +15,19 @@
 //= require turbolinks
 //= require_tree .
 
-$("#weekday").bind("change", function(){
-   window.location = "/weekly_menu/manage/" + $(this).val()
+$("#weekday").bind("change", function () {
+    window.location = "/weekly_menu/manage/" + $(this).val()
 });
 
 $(".active_user").bind('click', function () {
     var THAT = this;
     var statusOfUser = $(THAT).attr("data_user_status");
     var userId = $(THAT).attr("data_user_id");
-    var link =  "/mtx_user/change_status/" + userId + "/" + statusOfUser;
+    var link = "/mtx_user/change_status/" + userId + "/" + statusOfUser;
     $.ajax({
         url: link,
         type: "GET",
-        success: function(result){
+        success: function (result) {
             if (result.active == 1) {
                 $(THAT).attr("data_user_status", 0);
                 $(THAT).text("Active");
@@ -38,3 +38,23 @@ $(".active_user").bind('click', function () {
         }
     })
 })
+
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
+function calculateTotal() {
+    var total = 0;
+
+    $(".product_item").each(function () {
+        var quantity = parseInt(this.value=='' ? 0 : this.value);
+        var price = parseInt($(this).attr("attr_price"));
+        total += quantity * price;
+    });
+    $("#total_order").val(total);
+}
