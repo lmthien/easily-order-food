@@ -6,8 +6,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_locale
 
   rescue_from CanCan::AccessDenied do |exception|
-    flash[:error] = "Access denied."
-    redirect_to root_url
+    redirect_to permission_message_url
   end
   def sort_column
     # MtxOrder.column_names.include?(params[:sort]) ? params[:sort] : "id"

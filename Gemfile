@@ -27,6 +27,8 @@ gem 'bootstrap-sass'
 # Phu: using gem cancancan for authorization and permission
 gem 'cancancan', '~> 1.13.1'
 
+gem 'bcrypt-ruby', :require => 'bcrypt'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
