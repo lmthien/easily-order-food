@@ -17,6 +17,8 @@
 .language_div {
     float: right;
     color: white;
+    position: absolute;
+    right: 0px;
 }
 
 .language_div > p {
@@ -35,4 +37,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.inputLogin {
+    margin-top:10px;
 }

@@ -16,6 +16,10 @@
   <strong>Status:</strong>
   <%= @product.status %>
 </p>
+<p>
+  <strong>Iamge:</strong>
+  <%= image_tag "uploads/" + @product.thumb, :style => "width: 100px; height: 100px;"  %>
+</p>
 
 <p>
   <strong>Intro:</strong>

@@ -4,30 +4,47 @@
 
     <a href="#1" class="logo-link"><img src="/assets/logo.png" alt="RecipeFinder logo" class="logo"></a>
 
+    <div class="language_div">
+      <p>
+        <%= link_to_unless I18n.locale == :en, I18n.t('views.header.languages.english'), locale: :en %>
+        |
+        <%= link_to_unless I18n.locale == :vi, I18n.t('views.header.languages.vietnamese'), locale: :vi %>
+      </p>
+    </div>
     <nav>
       <ul>
-        <li><a href="#2"><%= I18n.t('views.header.login')%></a></li>
-        <li><a href="#3"><%= I18n.t('views.header.customer')%></a></li>
-        <li>
-          <div class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown"><%= I18n.t('views.header.administrator')%><span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><%= link_to I18n.t('views.header.order_list'), {:controller => '/mtx_order', :action => 'show_list'} %></li>
-                <li><%= link_to I18n.t('views.header.user_list'), {:controller => '/mtx_user', :action => 'show_list'} %></li>
-            </ul>
-          </div>
-        </li>
+        <% if logged_in? %>
+            <li>
+              <%= current_user.fullname %>
+            </li>
+            <li>
+              <%= link_to "Sign out", log_out_url %>
+            </li>
+        <% else %>
+            <li>
+              <%= link_to "Sign in", sign_in_url %>
+            </li>
+            <li>
+              <%= link_to "Sign up", new_mtx_user_path %>
+            </li>
+        <% end %>
+        <!--<li><a href="#3"><%= I18n.t('views.header.customer') %></a></li>-->
+        <% if can? :show_list, current_user %>
+            <li>
+              <div class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown"><%= I18n.t('views.header.administrator') %>
+                  <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><%= link_to I18n.t('views.header.order_list'), {:controller => '/mtx_order', :action => 'show_list'} %></li>
+                  <li><%= link_to I18n.t('views.header.user_list'), {:controller => '/mtx_user', :action => 'show_list'} %></li>
+                </ul>
+              </div>
+            </li>
+        <% end %>
       </ul>
     </nav>
 
-    <div class="language_div">
-        <p>
-          <%= link_to_unless I18n.locale == :en, I18n.t('views.header.languages.english'), locale: :en %>
-          |
-          <%= link_to_unless I18n.locale == :vi, I18n.t('views.header.languages.vietnamese'), locale: :vi %>
-        </p>
-    </div>
-
-  </div><!-- header-inside -->
+  </div>
+  <!-- header-inside -->
 
 </header>

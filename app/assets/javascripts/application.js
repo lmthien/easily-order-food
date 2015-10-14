@@ -18,3 +18,23 @@
 $("#weekday").bind("change", function(){
    window.location = "/weekly_menu/manage/" + $(this).val()
 });
+
+$(".active_user").bind('click', function () {
+    var THAT = this;
+    var statusOfUser = $(THAT).attr("data_user_status");
+    var userId = $(THAT).attr("data_user_id");
+    var link =  "/mtx_user/change_status/" + userId + "/" + statusOfUser;
+    $.ajax({
+        url: link,
+        type: "GET",
+        success: function(result){
+            if (result.active == 1) {
+                $(THAT).attr("data_user_status", 0);
+                $(THAT).text("Active");
+            } else {
+                $(THAT).attr("data_user_status", 1);
+                $(THAT).text("Inactive");
+            }
+        }
+    })
+})
