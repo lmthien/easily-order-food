@@ -6189,3 +6189,34 @@ Processing by HomeController#index as HTML
   Rendered layouts/_header.html.erb (39.0ms)
   Rendered layouts/_footer.html.erb (0.4ms)
 Completed 200 OK in 1783ms (Views: 1706.4ms | ActiveRecord: 24.5ms)
+Processing by HomeController#index as HTML
+  [1m[36mMtxWeeklyMenu Load (0.4ms)[0m  [1mSELECT  `mtx_weekly_menu`.* FROM `mtx_weekly_menu` WHERE (day_key = 'thu') LIMIT 1[0m
+  [1m[35mMtxUser Load (1.6ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1
+  Rendered home/index.html.erb within layouts/application (7.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (17.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 2367ms (Views: 2195.5ms | ActiveRecord: 6.8ms)
+Processing by HomeController#index as HTML
+  [1m[36mMtxWeeklyMenu Load (0.4ms)[0m  [1mSELECT  `mtx_weekly_menu`.* FROM `mtx_weekly_menu` WHERE (day_key = 'thu') LIMIT 1[0m
+  [1m[35mMtxUser Load (0.5ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 160.9ms | ActiveRecord: 1.0ms)
+Processing by HomeController#index as HTML
+  [1m[35mMtxWeeklyMenu Load (0.7ms)[0m  SELECT  `mtx_weekly_menu`.* FROM `mtx_weekly_menu` WHERE (day_key = 'thu') LIMIT 1
+  [1m[36mMtxUser Load (0.2ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 149ms (Views: 143.7ms | ActiveRecord: 0.9ms)

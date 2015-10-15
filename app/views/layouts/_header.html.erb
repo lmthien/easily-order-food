@@ -9,18 +9,6 @@
     <!--|-->
     <!--<%= link_to_unless I18n.locale == :vi, I18n.t('views.home.languages.vietnamese'), locale: :vi %>-->
     <!--</p>-->
-    <nav>
-      <ul>
-        <li>
-          <% if logged_in? %>
-              <%= current_user.fullname %>
-              <%= link_to "Sign out", log_out_url %>
-          <% else %>
-              <%= link_to "Sign in", sign_in_url %>
-              <%= link_to "Sign up", new_mtx_user_path %>
-          <% end %>
-        </li>
-        <li><a href="#3">Customer</a></li>
     <div class="language_div">
       <p>
         <%= link_to "", {locale: :en}, {:class => 'us_icon', :title => I18n.t('views.header.languages.english')} %>
@@ -28,6 +16,7 @@
       </p>
       </br>
     </div>
+
     <nav>
       <ul>
         <% if logged_in? %>
@@ -63,7 +52,6 @@
         <% end %>
       </ul>
     </nav>
-
   </div>
   <!-- header-inside -->
 
