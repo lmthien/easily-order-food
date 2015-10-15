@@ -39,6 +39,26 @@ $(".active_user").bind('click', function () {
     })
 })
 
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
+function calculateTotal() {
+    var total = 0;
+
+    $(".product_item").each(function () {
+        var quantity = parseInt(this.value=='' ? 0 : this.value);
+        var price = parseInt($(this).attr("attr_price"));
+        total += quantity * price;
+    });
+    $("#total_order").val(total);
+}
+
 add_item = function(product_id){
     var success = function(data){
         if(data.length > 0) {
