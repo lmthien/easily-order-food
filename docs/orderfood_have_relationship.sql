@@ -66,6 +66,7 @@ CREATE TABLE `mtx_product` (
   `status` tinyint(1) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
   `updated_at` datetime DEFAULT NULL,
+  `thumb` varchar(255) COLLATE utf8_unicode_ci
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 

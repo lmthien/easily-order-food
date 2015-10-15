@@ -1,6 +1,6 @@
 <%= form_tag(weekly_menu_manage_path, method: :post) do %>
     <div class="nav">
-      <h4>Listing of products on
+      <h4><%= I18n.t('views.weekly_menu.day_select_label') %>
           <span class="btn-group">
             <%= select_tag("weekday",  options_for_select(@ds4WeekDaySelect.invert, @dayOfWeek) ) %>
           </span>
@@ -11,8 +11,8 @@
     <thead>
         <tr>
           <th>&nbsp;</th>
-          <th>Name</th>
-          <th>Price</th>
+          <th><%= I18n.t('activerecord.attributes.weekly_menu.name') %></th>
+          <th><%= I18n.t('activerecord.attributes.weekly_menu.price') %></th>
         </tr>
     </thead>
     <tbody>
@@ -39,6 +39,6 @@
     </table>
 
     <div class="actions">
-      <input type="submit" value="Submit" class="btn btn-primary">
+      <input type="submit" value="<%= I18n.t('views.weekly_menu.submit') %>" class="btn btn-primary">
     </div>
 <% end %>

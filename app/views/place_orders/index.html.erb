@@ -1,8 +1,8 @@
 <h1>Place Order</h1>
 <p>Show list product on daily menu</p>
 <%= form_tag("place_orders/create_order", method: "post") do %>
-<div class="CSSTableGenerator">
-  <table>
+<div>
+  <table class="table table-striped table-bordered table-hover">
     <tr>
       <td>
         Food
@@ -14,26 +14,29 @@
         Order
       </td>
     </tr>
-    <% @daily_menu_detail.each do |daily_menu_detail| %>
+    <% @product.each do |product_items| %>
         <tr>
           <td>
-            <%= daily_menu_detail.mtx_product.mtx_product_languages.first.name %>
+            <%= product_items.mtx_product_languages.first.name %>
           </td>
           <td>
-            <%= daily_menu_detail.mtx_product.price %>
+            <%= product_items.price %>
           </td>
           <td>
-            <input type="text" name="order">
+            <input type="text" value="0" class="product_item" attr_price="<%= product_items.price %>"
+                   onkeypress="return isNumber(event)"
+                   onchange="calculateTotal();"
+                   onkeyup="this.onchange();"
+                   name='product[<%= product_items.id %>_<%= product_items.price %>]'>
           </td>
         </tr>
     <% end %>
     <tr>
       <td></td>
       <td>Total:</td>
-      <td><input type="text" name="total"></td>
+      <td><input type="text" name="total_order" id="total_order" onkeypress="return false;"></td>
     </tr>
   </table>
 </div>
-<%= text_field_tag(:price_text) %>
 <%= submit_tag("Create Order") %>
 <% end %>

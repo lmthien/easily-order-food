@@ -1,5 +1,6 @@
 class WeeklyMenuController < ApplicationController
   layout "admin"
+  include MtxUserHelper
 
   def manage
     #get product of weekly menu

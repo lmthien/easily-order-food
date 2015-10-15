@@ -1,0 +1,2 @@
+class MtxOrderDetailController < ApplicationController
+end

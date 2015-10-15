@@ -17,6 +17,7 @@ module MtxUserHelper
   # Logs out the current user.
   def log_out
     session.delete(:user_id)
+    session.delete(:order_items)
     @current_user = nil
 
   end

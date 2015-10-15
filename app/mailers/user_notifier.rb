@@ -7,4 +7,14 @@ class UserNotifier < ApplicationMailer
     mail( :to => @user.email,
           :subject => 'Thanks for signing up for our amazing app' )
   end
+
+  def send_email(user,email_title,email_content)
+      @user = user
+      mail(
+          :to => @user.email,
+          :subject => email_title,
+          :body => email_content
+      )
+  end
+
 end
