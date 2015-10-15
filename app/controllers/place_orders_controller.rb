@@ -36,8 +36,8 @@ class PlaceOrdersController < ApplicationController
     end
 
     UserNotifier.send_email(current_user,'Order confirmation','Thank for your order')
-
     order.save
+    session.delete(:order_items)
     redirect_to '/place_orders/order_success'
   end
 
