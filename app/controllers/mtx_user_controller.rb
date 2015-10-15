@@ -2,12 +2,11 @@ class MtxUserController < ApplicationController
   layout "admin"
   helper_method :sort_column, :sort_direction
   include MtxUserHelper
-
+  load_and_authorize_resource
   def show_list
     @users = MtxUser.order(sort_column + " " + sort_direction).page(params[:page]).per(20)
     # @orders = MtxOrder.joins(:mtx_user).select('`mtx_orders`.*, `mtx_user`.username as username').order(sort_column + " " + sort_direction).page(params[:page]).per(3)
     # @orders_scope = MtxOrder.ordered_by_username.page(params[:page]).per(2)
-    authorize! :show_list, @user
   end
 
   def show

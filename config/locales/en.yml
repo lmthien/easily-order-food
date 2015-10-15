@@ -35,9 +35,21 @@ en:
         languages:
           english: 'English'
           vietnamese: 'Vietnamese'
-        login: 'Log In'
-        logout: 'Log Out'
+        signin: 'Sign in'
+        signout: 'Sign out'
+        signup: 'Sign Up'
         customer: 'Customer'
+      home:
+        banner_text: 'Sweet and Sour Zucchini Puree'
+        menu:
+          shopping_cart: 'Shopping cart >>'
+          empty_menu: 'There is no product to day!'
+          today_menu_label: 'Today Menu'
+          description: 'Description: '
+          introduction: 'Introduction: '
+          price: 'Price: '
+          added: 'Added'
+          add_to_cart: 'Add to cart'
   activerecord:
       models:
         order: 'Order'

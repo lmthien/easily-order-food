@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   def permission_message
 
   end
-  
+
   def index
     @dayOfWeekList = {1 => "mon",
                       2 => "tue",

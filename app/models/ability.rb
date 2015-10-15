@@ -6,7 +6,7 @@ class Ability
     if user.user_type == 1
       can :manage, :all
     else
-
+      can [:sign_in, :new, :destroy, :process_login], MtxUser
     end
     # Define abilities for the passed in user here. For example:
     #

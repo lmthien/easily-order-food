@@ -1,7 +1,8 @@
 class MtxProductsController < ApplicationController
   layout "admin"
   helper_method :sort_column, :sort_direction
-
+  include MtxUserHelper
+  load_and_authorize_resource
   before_action :set_mtx_product, only: [:show, :edit, :update, :destroy]
 
   # GET /mtx_products

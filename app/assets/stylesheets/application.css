@@ -16,7 +16,6 @@
 .language_div {
     float: right;
     color: white;
-    position: absolute;
     right: 0px;
 }
 
@@ -28,6 +27,24 @@
     color: gray !important;
 }
 
+.vi_icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    content: "";
+    background: url(/assets/vi_flag.png) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.us_icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    content: "";
+    background: url(/assets/us_flag.png) no-repeat 0 0;
+    background-size: 100%;
+}
+
 .dropdown {
     cursor: pointer;
 }
@@ -36,6 +53,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: normal;
 }
 
 .inputLogin {
@@ -46,10 +64,33 @@
     float: right;
 }
 
+.cart_icon:hover {
+    background-color: transparent;
+}
+
+.cart_icon:after {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    content: "";
+    background: url(/assets/cart.png) no-repeat 0 0;
+    background-size: 100%;
+    margin-top: 5px;
+}
+
 .dispNone {
     display: none;
 }
 
 .user_name_label {
     color: white;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.menu_content {
+    display: inline-block;
+    width: 100%;
 }
