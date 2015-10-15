@@ -29,7 +29,10 @@ vi:
         last: "Cuối &raquo;"
         truncate: "..."
       header:
-        administrator: 'Quản trị'
+        administrator: 'Quản lý'
+        home: 'Trang chủ'
+        products: 'Sản phẩm'
+        weekly_menu: 'Thực đơn'
         order_list: 'Đơn hàng'
         user_list: 'Thành viên'
         languages:
@@ -50,6 +53,20 @@ vi:
           price: 'Giá: '
           added: 'Đã thêm'
           add_to_cart: 'Thêm vào giỏ hàng'
+      order:
+        list_order_label: 'Danh sách hoá đơn'
+      user:
+        list_user_label: 'Danh sách tài khoản'
+      product:
+        list_product_label: 'Danh sách sản phẩm'
+        new: 'Tạo sản phẩm'
+        show: 'Xem'
+        edit: 'Sửa'
+        delete: 'Xoá'
+      weekly_menu:
+        manage_weekly_menu_label: 'Quản lý thực đơn'
+        day_select_label: 'Danh sách sản phẩm vào thứ '
+        submit: 'Lưu'
   activerecord:
       models:
         order: 'Đơn hàng'
@@ -61,3 +78,10 @@ vi:
           id: 'Mã tài khoản'
           username: 'Tên tài khoản'
           fullname: 'Họ và tên'
+        product:
+          name: 'Tên'
+          price: 'Giá'
+          Status: 'Tình trạng'
+        weekly_menu:
+          name: 'Tên'
+          price: 'Giá'
