@@ -6162,3 +6162,30 @@ Processing by PlaceOrdersController#index as HTML
   Rendered layouts/_header.html.erb (2.2ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 138ms (Views: 134.4ms | ActiveRecord: 2.1ms)
+Processing by HomeController#index as HTML
+  [1m[36mMtxWeeklyMenu Load (6.9ms)[0m  [1mSELECT  `mtx_weekly_menu`.* FROM `mtx_weekly_menu` WHERE (day_key = 'thu') LIMIT 1[0m
+Mysql2::Error: Table 'orderfood.mtx_weekly_menu' doesn't exist: SELECT  `mtx_weekly_menu`.* FROM `mtx_weekly_menu` WHERE (day_key = 'thu') LIMIT 1
+Completed 500 Internal Server Error in 103ms (ActiveRecord: 6.9ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.3ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.4ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/sysadmin/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (61.0ms)
+Processing by HomeController#index as HTML
+  [1m[35mMtxWeeklyMenu Load (22.2ms)[0m  SELECT  `mtx_weekly_menu`.* FROM `mtx_weekly_menu` WHERE (day_key = 'thu') LIMIT 1
+  [1m[36mMtxUser Load (0.3ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `mtx_user`.* FROM `mtx_user` WHERE `mtx_user`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_header.html.erb (39.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 1783ms (Views: 1706.4ms | ActiveRecord: 24.5ms)

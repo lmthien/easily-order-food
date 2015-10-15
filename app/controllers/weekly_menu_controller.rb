@@ -51,10 +51,11 @@ class WeeklyMenuController < ApplicationController
     else
       @weekDay = MtxWeeklyMenu.create(:day_key => @dayOfWeek, :day_title => @ds4WeekDaySelect[:@dayOfWeek])
     end
-
-    @productIds.each {
-      |id| MtxWeeklyMenuDetail.create(:product_id => id, :weekly_menu_id => @weekDay.id)
-    }
+    if @productIds.any?
+      @productIds.each {
+          |id| MtxWeeklyMenuDetail.create(:product_id => id, :weekly_menu_id => @weekDay.id)
+      }
+    end
 
     redirect_to weekly_menu_manage_path(:dayOfWeek => @dayOfWeek)
   end

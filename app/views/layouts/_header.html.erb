@@ -4,7 +4,6 @@
 
     <a href="/" class="logo-link"><img src="/assets/logo.png" alt="RecipeFinder logo" class="logo"></a>
 
-<<<<<<< HEAD
     <!--<p>-->
     <!--<%= link_to_unless I18n.locale == :en, I18n.t('views.home.languages.english'), locale: :en %>-->
     <!--|-->
@@ -22,7 +21,6 @@
           <% end %>
         </li>
         <li><a href="#3">Customer</a></li>
-=======
     <div class="language_div">
       <p>
         <%= link_to "", {locale: :en}, {:class => 'us_icon', :title => I18n.t('views.header.languages.english')} %>
@@ -48,21 +46,17 @@
             </li>
         <% end %>
         <!--<li><a href="#3"><%= I18n.t('views.header.customer') %></a></li>-->
->>>>>>> 5754434feb0619adef9516acbc417a6240077ed9
         <% if can? :show_list, current_user %>
             <li>
               <div class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown">Administrator<span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-<<<<<<< HEAD
                   <li><%= link_to I18n.t('views.home.order_list'), {:controller => '/mtx_order', :action => 'show_list'} %></li>
                   <li><%= link_to I18n.t('views.home.user_list'), {:controller => '/mtx_user', :action => 'show_list'} %></li>
-=======
                   <li><%= link_to I18n.t('views.header.products'), mtx_products_path %></li>
                   <li><%= link_to I18n.t('views.header.weekly_menu'), weekly_menu_manage_url %></li>
                   <li><%= link_to I18n.t('views.header.order_list'), mtx_order_show_list_url %></li>
                   <li><%= link_to I18n.t('views.header.user_list'), mtx_user_show_list_url %></li>
->>>>>>> 5754434feb0619adef9516acbc417a6240077ed9
                 </ul>
               </div>
             </li>
