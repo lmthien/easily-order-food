@@ -45,6 +45,11 @@ en:
           shopping_cart: 'Shopping cart >>'
           empty_menu: 'There is no product to day!'
           today_menu_label: 'Today Menu'
+          description: 'Description: '
+          introduction: 'Introduction: '
+          price: 'Price: '
+          added: 'Added'
+          add_to_cart: 'Add to cart'
   activerecord:
       models:
         order: 'Order'

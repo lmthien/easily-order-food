@@ -2,13 +2,12 @@
 
   <div class="center-global cf">
 
-    <a href="#1" class="logo-link"><img src="/assets/logo.png" alt="RecipeFinder logo" class="logo"></a>
+    <a href="/" class="logo-link"><img src="/assets/logo.png" alt="RecipeFinder logo" class="logo"></a>
 
     <div class="language_div">
       <p>
-        <%= link_to_unless I18n.locale == :en, I18n.t('views.header.languages.english'), locale: :en %>
-        |
-        <%= link_to_unless I18n.locale == :vi, I18n.t('views.header.languages.vietnamese'), locale: :vi %>
+        <%= link_to "", {locale: :en}, {:class => 'us_icon', :title => I18n.t('views.header.languages.english')} %>
+        <%= link_to "", {locale: :vi}, {:class => 'vi_icon', :title => I18n.t('views.header.languages.vietnamese')} %>
       </p>
       </br>
     </div>

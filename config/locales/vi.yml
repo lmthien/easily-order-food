@@ -45,6 +45,11 @@ vi:
           shopping_cart: 'Giỏ hàng >>'
           empty_menu: 'Không có thực đơn hôm nay!'
           today_menu_label: 'Thực đơn hôm nay'
+          description: 'Miêu tả: '
+          introduction: 'Giới thiệu: '
+          price: 'Giá: '
+          added: 'Đã thêm'
+          add_to_cart: 'Thêm vào giỏ hàng'
   activerecord:
       models:
         order: 'Đơn hàng'
