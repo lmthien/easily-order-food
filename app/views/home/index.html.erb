@@ -33,13 +33,13 @@
 
               <div>
                 <div>
-                  <h2 class="menu_item_information" title="<%= product.mtx_product_language.name %>"><%= product.mtx_product_language.name %></h2>
+                  <h2 class="menu_item_information" title="<%= product.mtx_product.mtx_product_languages.first.name %>"><%= product.mtx_product.mtx_product_languages.first.name %></h2>
                 </div>
                 <div>
-                  <p class="menu_item_information" title="<%= product.mtx_product_language.description %>">Discription: <%= product.mtx_product_language.description %></p>
+                  <p class="menu_item_information" title="<%= product.mtx_product.mtx_product_languages.first.description %>">Discription: <%= product.mtx_product.mtx_product_languages.first.description %></p>
                 </div>
                 <div>
-                  <p class="menu_item_information" title="<%= product.mtx_product_language.intro %>">Intro: <%= product.mtx_product_language.intro %></p>
+                  <p class="menu_item_information" title="<%= product.mtx_product.mtx_product_languages.first.intro %>">Intro: <%= product.mtx_product.mtx_product_languages.first.intro %></p>
                 </div>
                 <div>
                   <p class="menu_item_information" title="<%= product.mtx_product.price %>">Price: <%= product.mtx_product.price %></p>
