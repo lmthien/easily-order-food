@@ -46,10 +46,27 @@
     float: right;
 }
 
+.cart:after {
+    content: url(/assets/up_arrow.gif);
+}
+
 .dispNone {
     display: none;
 }
 
 .user_name_label {
     color: white;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.menu_content {
+    display: inline-block;
+    width: 100%;
+}
+
+.cart_icon {
+    background: url(/assets/up_arrow.gif) no-repeat top right;
 }

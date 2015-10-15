@@ -35,9 +35,16 @@ vi:
         languages:
           english: 'Tiếng Anh'
           vietnamese: 'Tiếng Việt'
-        login: 'Đăng nhập'
-        logout: 'Đăng xuất'
+        signin: 'Đăng nhập'
+        signout: 'Đăng xuất'
+        signup: 'Đăng ký'
         customer: 'Khách hàng'
+      home:
+        banner_text: 'Zucchini Puree Chua Ngọt'
+        menu:
+          shopping_cart: 'Giỏ hàng >>'
+          empty_menu: 'Không có thực đơn hôm nay!'
+          today_menu_label: 'Thực đơn hôm nay'
   activerecord:
       models:
         order: 'Đơn hàng'

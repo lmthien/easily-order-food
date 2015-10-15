@@ -3,8 +3,7 @@
   <img src="/assets/promo.jpg" alt="Zucchini Puree" width="1020" height="353">
 
   <div class="promo-desc">
-    <h1>Sweet and Sour Zucchini Puree</h1>
-    <a href="#5" class="promo-btn">cook it now!</a>
+    <h1><%= I18n.t('views.home.banner_text') %>></h1>
   </div>
 
 </div><!-- promo -->
@@ -12,20 +11,21 @@
 <div class="main center-global cf">
 
   <div class="latest">
-    <div>
-      <h1 style="float: left">Today menu</h1>
+    <div class="menu_header">
+      <h1 class="floatLeft"><%= I18n.t('views.home.menu.today_menu_label') %></h1>
       <% if @cart.size > 0 %>
           <h3 class="cart">
-            <%= link_to 'Shopping cart>>', place_orders_path %>
+            <%= link_to I18n.t('views.home.menu.shopping_cart'), place_orders_path %>
           </h3>
       <% else %>
           <h3 class="cart dispNone">
-            <%= link_to 'Shopping cart>>', place_orders_path %>
+            <%= link_to I18n.t('views.home.menu.shopping_cart'), place_orders_path, :class => "cart_icon" %>
           </h3>
       <% end %>
     </div>
+    <div class="menu_content">
     <% if @weeklyMenuDetailToday == nil %>
-        <h5>There is no product to day!</h5>
+        <h5 class="text-center"><%= I18n.t('views.home.menu.empty_menu') %></h5>
     <% else %>
         <% @weeklyMenuDetailToday.each do |product| %>
             <div class="media">
@@ -65,7 +65,7 @@
             <br>
         <% end %>
     <% end %>
-
+    </div>
   </div>
   <!-- .latest -->
 
