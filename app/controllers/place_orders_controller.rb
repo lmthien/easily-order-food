@@ -38,6 +38,10 @@ class PlaceOrdersController < ApplicationController
     UserNotifier.send_email(current_user,'Order confirmation','Thank for your order')
 
     order.save
-    redirect_to place_orders_path
+    redirect_to '/place_orders/order_success'
+  end
+
+  def order_success
+
   end
 end
