@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   resources :place_orders do
     collection do
       post '/create_order' => 'place_orders#create_order'
+      get '/order_success' => 'place_orders#order_success'
     end
 
   end

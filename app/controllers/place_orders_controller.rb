@@ -1,11 +1,14 @@
 class PlaceOrdersController < ApplicationController
   include MtxUserHelper
   def index
-    @daily_menu = MtxWeeklyMenu.find(1)
-    @daily_menu_detail = @daily_menu.mtx_weekly_menu_details.all
-      @items = session[:order_items]
-    puts '123'
-    puts @items
+    @product_items_session = session[:order_items]
+    ids = ''
+
+    @product_items_session.each do |items_session|
+      ids += items_session + ','
+    end
+
+    @product = MtxProduct.where('id in ('+ids[0,ids.length-1]+')')
   end
 
   def create_order
@@ -32,7 +35,13 @@ class PlaceOrdersController < ApplicationController
       order.mtx_order_details << orderDetail
     end
 
+    UserNotifier.send_email(current_user,'Order confirmation','Thank for your order')
     order.save
-    redirect_to place_orders_path
+    session.delete(:order_items)
+    redirect_to '/place_orders/order_success'
+  end
+
+  def order_success
+
   end
 end
