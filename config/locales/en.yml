@@ -30,6 +30,9 @@ en:
         truncate: "..."
       header:
         administrator: 'Administrator'
+        home: 'Home'
+        products: 'Products'
+        weekly_menu: 'Weekly menu'
         order_list: 'Order list'
         user_list: 'User list'
         languages:
@@ -50,6 +53,20 @@ en:
           price: 'Price: '
           added: 'Added'
           add_to_cart: 'Add to cart'
+      order:
+        list_order_label: 'List of orders'
+      user:
+        list_user_label: 'List of users'
+      product:
+        list_product_label: 'List of products'
+        new: 'New product'
+        show: 'Show'
+        edit: 'Edit'
+        delete: 'Destroy'
+      weekly_menu:
+        manage_weekly_menu_label: 'Manage weekly menu label'
+        day_select_label: 'Listing of products on '
+        submit: 'Submit'
   activerecord:
       models:
         order: 'Order'
@@ -61,4 +78,11 @@ en:
           id: 'User Id'
           username: 'Username'
           fullname: 'Fullname'
+        product:
+          name: 'Name'
+          price: 'Price'
+          Status: 'Status'
+        weekly_menu:
+          name: 'Name'
+          price: 'Price'
 

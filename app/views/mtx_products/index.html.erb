@@ -1,19 +1,19 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>List of products</h1>
+<h1><%= I18n.t('views.product.list_product_label') %></h1>
 
 <div class="nav">
-  <%= link_to 'New product', new_mtx_product_path, class: "btn btn-primary" %>
+  <%= link_to I18n.t('views.product.new'), new_mtx_product_path, class: "btn btn-primary" %>
 </div>
 
 <br \>
 <table class="table table-bordered table-striped" id="sortTable">
   <thead>
     <tr>
-      <th><%= sortable "mtx_product_language.name", "Name" %></th>
-      <th><%= sortable "price", "Price" %></th>
-      <th>Status</th>
+      <th><%= sortable "mtx_product_language.name", I18n.t('activerecord.attributes.product.name') %></th>
+      <th><%= sortable "price", I18n.t('activerecord.attributes.product.price') %></th>
+      <th><%= I18n.t('activerecord.attributes.product.Status') %></th>
       <th></th>
     </tr>
   </thead>
@@ -25,9 +25,9 @@
         <td><%= mtx_product.price %></td>
         <td><%= mtx_product.status %></td>
         <td>
-            <%= link_to 'Show', mtx_product, class: "btn btn-default" %> &nbsp;
-            <%= link_to 'Edit', edit_mtx_product_path(mtx_product), class: "btn btn-default" %> &nbsp;
-            <%= link_to 'Destroy', mtx_product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+            <%= link_to I18n.t('views.product.show'), mtx_product, class: "btn btn-default" %> &nbsp;
+            <%= link_to I18n.t('views.product.edit'), edit_mtx_product_path(mtx_product), class: "btn btn-default" %> &nbsp;
+            <%= link_to I18n.t('views.product.delete'), mtx_product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
         </td>
       </tr>
     <% end %>
