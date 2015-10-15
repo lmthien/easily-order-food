@@ -1,7 +1,7 @@
 class MtxOrderController < ApplicationController
   layout "admin"
   helper_method :sort_column, :sort_direction
-
+  load_and_authorize_resource
 
   def show_list
     @orders = MtxOrder.includes(:mtx_user).order(sort_column + " " + sort_direction).page(params[:page]).per(3)
