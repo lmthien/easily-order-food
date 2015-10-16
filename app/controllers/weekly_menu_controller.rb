@@ -51,8 +51,10 @@ class WeeklyMenuController < ApplicationController
 
     unless @productIds.nil?
       @products_of_weekly_menu = []
-      @productIds.each { |id| @products_of_weekly_menu.push({:product_id => id, :weekly_menu_id => @weekDay.id})}
-      MtxWeeklyMenuDetail.create(@products_of_weekly_menu)
+      @productIds.each {
+        |id| @products_of_weekly_menu.push(:product_id => id, :weekly_menu_id => @weekDay.id)
+      }
+      MtxWeeklyMenuDetail.create @products_of_weekly_menu
     end
 
     redirect_to weekly_menu_manage_path(:dayOfWeek => @dayOfWeek)
