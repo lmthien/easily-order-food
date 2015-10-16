@@ -12,7 +12,7 @@ class PlaceOrdersController < ApplicationController
   end
 
   def create_order
-    # Create order
+    # Create orders
     order = MtxOrder.new
     order.customer_id = current_user.id
     order.phone = 'phone'
