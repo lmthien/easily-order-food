@@ -20,41 +20,42 @@ class WeeklyMenuController < ApplicationController
     # exit
 
     #data source for weekday dropdown list
-    @ds4WeekDaySelect = {:mon => "Monday",
-                         :tue => "Tuesday",
-                         :wed => "Wednesday",
-                         :thu => "Thursday",
-                         :fri => "Friday",
-                         :sat => "Satusday",
-                         :sun => "Sunday"
+    @ds4WeekDaySelect = {
+        :mon => "Monday",
+        :tue => "Tuesday",
+        :wed => "Wednesday",
+        :thu => "Thursday",
+        :fri => "Friday",
+        :sat => "Satusday",
+        :sun => "Sunday"
     }
   end
 
   def update
-    @ds4WeekDaySelect = {:mon => "Monday",
-                         :tue => "Tuesday",
-                         :wed => "Wednesday",
-                         :thu => "Thursday",
-                         :fri => "Friday",
-                         :sat => "Satusday",
-                         :sun => "Sunday"
+    @ds4WeekDaySelect = {
+      'mon' => "Monday",
+      'tue' => "Tuesday",
+      'wed' => "Wednesday",
+      'thu' => "Thursday",
+      'fri' => "Friday",
+      'sat' => "Satusday",
+      'sun' => "Sunday"
     }
 
     @dayOfWeek = params[:weekday]
     @productIds = params[:ids]
 
-    @weekDay = MtxWeeklyMenu.find_by(["day_key = ?", @dayOfWeek])
-    if !@weekDay.nil?
-        @weekDay.mtx_weekly_menu_details.each {
-            |p| p.destroy
-        }
-    else
-      @weekDay = MtxWeeklyMenu.create(:day_key => @dayOfWeek, :day_title => @ds4WeekDaySelect[:@dayOfWeek])
+    @weekDay = MtxWeeklyMenu.find_or_create_by(day_key: @dayOfWeek) do |weeklyMenu|
+      weeklyMenu.day_title = @ds4WeekDaySelect[@dayOfWeek]
     end
 
-    @productIds.each {
-      |id| MtxWeeklyMenuDetail.create(:product_id => id, :weekly_menu_id => @weekDay.id)
-    }
+    unless @productIds.nil?
+      @products_of_weekly_menu = []
+      @productIds.each {
+        |id| @products_of_weekly_menu.push(:product_id => id, :weekly_menu_id => @weekDay.id)
+      }
+      MtxWeeklyMenuDetail.create @products_of_weekly_menu
+    end
 
     redirect_to weekly_menu_manage_path(:dayOfWeek => @dayOfWeek)
   end
