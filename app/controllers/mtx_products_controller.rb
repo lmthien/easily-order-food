@@ -55,14 +55,16 @@ class MtxProductsController < ApplicationController
     # }
 
     #upload image
+    @fileName = ""
     uploaded_io = params[:mtx_product][:thumb]
-    @fileName = Time.now.to_i.to_s + File.extname(uploaded_io.original_filename)
-
-    File.open(Rails.root.join('app', 'assets', 'images', 'uploads', @fileName), 'wb') do |file|
-      file.write(uploaded_io.read)
+    unless uploaded_io.nil?
+      @fileName = Time.now.to_i.to_s + File.extname(uploaded_io.original_filename)
+      File.open(Rails.root.join('app', 'assets', 'images', 'uploads', @fileName), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
     end
 
-    @data = {
+    @dataOfProduct = {
         price: params.require(:mtx_product)[:price],
         status: params.require(:mtx_product)[:status],
         thumb: @fileName,
@@ -73,7 +75,7 @@ class MtxProductsController < ApplicationController
         ]
     }
 
-    @mtxProduct = MtxProduct.new(@data)
+    @mtxProduct = MtxProduct.new(@dataOfProduct)
 
     respond_to do |format|
       if @mtxProduct.save
@@ -81,9 +83,9 @@ class MtxProductsController < ApplicationController
         format.json { render :show, status: :created, location: @mtxProduct }
       else
         @pLangdata = {
-              name: params.require(:mtx_product_language)[:name],
-              intro: params.require(:mtx_product_language)[:intro],
-              description: params.require(:mtx_product_language)[:description]
+          name: params.require(:mtx_product_language)[:name],
+          intro: params.require(:mtx_product_language)[:intro],
+          description: params.require(:mtx_product_language)[:description]
         }
         @productLang = MtxProductLanguage.new(@pLangdata)
         @productLang.mtx_product = @mtxProduct
@@ -102,7 +104,7 @@ class MtxProductsController < ApplicationController
   def update
     @mtxProduct = MtxProduct.find(params[:id])
     respond_to do |format|
-      @data = params.require(:mtx_product).permit(:price, :status)
+      @dataOfProduct = params.require(:mtx_product).permit(:price, :status)
 
       #upload image
       uploaded_io = params[:mtx_product][:thumb]
@@ -110,17 +112,18 @@ class MtxProductsController < ApplicationController
         @fileName = Time.now.to_i.to_s + File.extname(uploaded_io.original_filename)
         File.open(Rails.root.join('app', 'assets', 'images', 'uploads', @fileName), 'wb') do |file|
           file.write(uploaded_io.read)
+          @dataOfProduct[:thumb] = @fileName
         end
-        @data[:thumb] = @fileName
+
       end
 
       @pLangdata = {
-          name: params.require(:mtx_product_language)[:name],
-          intro: params.require(:mtx_product_language)[:intro],
-          description: params.require(:mtx_product_language)[:description]
+        name: params.require(:mtx_product_language)[:name],
+        intro: params.require(:mtx_product_language)[:intro],
+        description: params.require(:mtx_product_language)[:description]
       }
 
-      if @mtxProduct.update_attributes(@data)
+      if @mtxProduct.update_attributes(@dataOfProduct)
         # @mtxProduct.mtx_product_languages.first.update_attributes(params.require(:mtx_product_language).permit(:name, :intro, :description))
         if @mtxProduct.mtx_product_languages.find_by(["product_id = ?", params[:id]]).update_attributes(@pLangdata)
           format.html { redirect_to @mtxProduct, notice: 'Mtx product was successfully updated.' }
