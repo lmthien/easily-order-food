@@ -31,7 +31,7 @@ class PlaceOrdersController < ApplicationController
       orderDetail = MtxOrderDetail.new
       orderDetail.product_id = @product_id
       orderDetail.quantity = value
-      orderDetail.price = @product_price
+      #orderDetail.price = @product_price
       order.mtx_order_details << orderDetail
     end
 

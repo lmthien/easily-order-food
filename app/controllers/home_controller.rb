@@ -19,7 +19,7 @@ class HomeController < ApplicationController
     @weeklyMenuToday = MtxWeeklyMenu.find_by(["day_key = ?", @today])
     @weeklyMenuDetailToday = nil
     if (@weeklyMenuToday != nil)
-      @weeklyMenuDetailToday = MtxWeeklyMenuDetail.where("weekly_menu_id = ?", @weeklyMenuToday.id)
+      @weeklyMenuDetailToday = MtxWeeklyMenuDetail.includes(:mtx_product).where("weekly_menu_id = ?", @weeklyMenuToday.id)
     end
 
     if session[:order_items].nil?
