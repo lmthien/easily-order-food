@@ -28,10 +28,18 @@ gem 'bootstrap-sass'
 gem 'cancancan', '~> 1.13.1'
 
 gem 'bcrypt-ruby', :require => 'bcrypt'
-
+gem 'rails_best_practices', '~> 1.15.7'
+# gem 'rubocop', '~> 0.34.2'
+gem 'uniform_notifier'
+gem 'ruby-growl', '~> 4.1'
+gem 'slack-notifier'
+# gem "bullet", :group => "development"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'bullet'
+  gem 'rubocop', '~> 0.34.2'
+  gem 'rubocop-checkstyle_formatter', require: false
 end
 
 group :development do
