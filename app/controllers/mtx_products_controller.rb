@@ -114,7 +114,6 @@ class MtxProductsController < ApplicationController
           file.write(uploaded_io.read)
           @dataOfProduct[:thumb] = @fileName
         end
-
       end
 
       @pLangdata = {
@@ -146,7 +145,6 @@ class MtxProductsController < ApplicationController
   # DELETE /mtx_products/1
   # DELETE /mtx_products/1.json
   def destroy
-    #@mtxProduct.mtx_product_languages.first.destroy
     @mtxProduct.destroy
     respond_to do |format|
       format.html { redirect_to mtx_products_url, notice: 'Product was successfully destroyed.' }
